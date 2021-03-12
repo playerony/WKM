@@ -1,0 +1,12 @@
+.env
+.next
+*.sh
+*.svg
+*.yml
+*.json
+.eslintrc
+.env.dist
+.gitignore
+.prettierrc
+.eslintignore
+.prettierignore
