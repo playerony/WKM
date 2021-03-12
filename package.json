@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start && next export",
     "format": "prettier --write \"**/*\"",
     "reinstall-deps": "bash ./scripts/reinstall-deps.sh",
     "lint": "eslint './**/*.{ts,tsx}' && echo 'lint success'",
