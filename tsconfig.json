@@ -21,13 +21,13 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": false
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "jest.config.js", "jest.setup.js", "jest.config.js"  ],
   "exclude": [
     "node_modules"
   ]
