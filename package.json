@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start && next export",
+    "start": "next start",
+    "build": "next build && next export",
     "format": "prettier --write \"**/*\"",
     "reinstall-deps": "bash ./scripts/reinstall-deps.sh",
     "lint": "eslint './**/*.{ts,tsx}' && echo 'lint success'",
