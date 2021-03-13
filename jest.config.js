@@ -11,7 +11,5 @@ module.exports = {
   testMatch: ['**/*.test.(ts|js|tsx)'],
   testEnvironment: 'node',
   preset: 'ts-jest',
-  setupFilesAfterEnv: [
-    '<rootDir>/setupEnzyme.ts',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/setupEnzyme.ts']
 }
