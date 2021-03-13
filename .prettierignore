@@ -5,6 +5,7 @@ out
 *.svg
 *.yml
 *.json
+public
 .eslintrc
 .env.dist
 .gitignore

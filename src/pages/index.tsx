@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Layout from '../components/Layout'
+import homeVideo from '../../public/home_page_video.mp4'
 
-const Index = (): JSX.Element => (
-  <Layout title="Home">
-    <h1>xD</h1>
-  </Layout>
+const HomePage = (): JSX.Element => (
+  <section>
+    <video src={homeVideo} autoPlay={true} muted={true} loop={true} />
+  </section>
 )
 
-export default Index
+export default HomePage
