@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": [
       "dom",
       "es2017"
@@ -29,6 +29,7 @@
     ],
     "paths": {
       "@public/*": ["public/*"],
+      "@tests/*": ["src/tests/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@providers/*": ["src/providers/*"]
