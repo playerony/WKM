@@ -1,6 +1,6 @@
 import React from 'react'
 
-import homeVideo from '../../public/home_page_video.mp4'
+import homeVideo from '@public/home_page_video.mp4'
 
 const HomePage = (): JSX.Element => (
   <section>

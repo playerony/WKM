@@ -36,7 +36,6 @@ export interface Variable {
 
 const variables: Variable = {
   baseFontSize: 16,
-
   color: {
     red: '#E81F25',
     gray: '#707070',
