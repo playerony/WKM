@@ -1,5 +1,7 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components'
 
+import variables, { Breakpoint } from './variables'
+
 export const transition = (
   transitions: string
 ): FlattenSimpleInterpolation => css`
@@ -124,3 +126,25 @@ export const appearance = (value: string): FlattenSimpleInterpolation => css`
   -moz-appearance: ${value};
   -webkit-appearance: ${value};
 `
+
+export const respondTo = (Object.keys(
+  variables.breakpoint
+) as (keyof Breakpoint)[]).reduce<
+  {
+    [key in keyof Breakpoint]: (
+      style: TemplateStringsArray,
+      ...args: Array<any>
+    ) => FlattenSimpleInterpolation
+  }
+>((accumulator, breakpoint) => {
+  accumulator[breakpoint] = (
+    style: TemplateStringsArray,
+    ...args: Array<any>
+  ): FlattenSimpleInterpolation => css`
+    @media (max-width: ${variables.breakpoint[breakpoint]}px) {
+      ${css(style, ...args)};
+    }
+  `
+
+  return accumulator
+}, {} as any)

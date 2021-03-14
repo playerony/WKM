@@ -9,6 +9,7 @@
     "start": "next start",
     "build": "next build && next export",
     "format": "prettier --write \"**/*\"",
+    "typecheck": "tsc --noEmit -p . --pretty",
     "reinstall-deps": "bash ./scripts/reinstall-deps.sh",
     "lint": "eslint './**/*.{ts,tsx}' && echo 'lint success'",
     "lint:fix": "eslint --fix './**/*.{ts,tsx}' && echo 'lint success'"

@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import NextApp from 'next/app'
 
-import AppProvider from '../providers/AppProvider'
+import AppProvider from '@providers/AppProvider'
 
 export default class App extends NextApp {
   render() {
