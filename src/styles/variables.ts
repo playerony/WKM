@@ -13,7 +13,14 @@ export interface Padding {
 
 export type Font = 'normal' | 'bold'
 
-export type Color = 'red' | 'gray' | 'black' | 'cream' | 'white' | 'orange' | 'purple'
+export type Color =
+  | 'red'
+  | 'gray'
+  | 'black'
+  | 'cream'
+  | 'white'
+  | 'orange'
+  | 'purple'
 
 export interface Variable {
   baseFontSize: number
@@ -37,7 +44,7 @@ const variables: Variable = {
     cream: '#FBF7F3',
     white: '#FFFFFF',
     orange: '#E4572E',
-    purple: '#6B5B95',
+    purple: '#6B5B95'
   },
   font: {
     normal: "'HelveticaNeue', Helvetica, Arial, sans-serif",
