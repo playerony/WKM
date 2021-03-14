@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mixin Functions alignItems Function snapshot test should match 1`] = `
+Array [
+  "
+  align-items: ",
+  "center",
+  ";
+  -ms-flex-align: ",
+  "center",
+  ";
+  -ms-align-items: ",
+  "center",
+  ";
+  -moz-align-items: ",
+  "center",
+  ";
+  -webkit-align-items: ",
+  "center",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions animation Function snapshot test should match 1`] = `
+Array [
+  "
+  animation: ",
+  "box1 500ms linear infinite",
+  ";
+  -o-animation: ",
+  "box1 500ms linear infinite",
+  ";
+  -ms-animation: ",
+  "box1 500ms linear infinite",
+  ";
+  -moz-animation: ",
+  "box1 500ms linear infinite",
+  ";
+  -webkit-animation: ",
+  "box1 500ms linear infinite",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions appearance Function snapshot test should match 1`] = `
+Array [
+  "
+  appearance: ",
+  "none",
+  ";
+  -ms-appearance: ",
+  "none",
+  ";
+  -moz-appearance: ",
+  "none",
+  ";
+  -webkit-appearance: ",
+  "none",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions borderRadius Function snapshot test should match 1`] = `
+Array [
+  "
+  border-radius: ",
+  "50px",
+  ";
+  -moz-border-radius: ",
+  "50px",
+  ";
+  -webkit-border-radius: ",
+  "50px",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions boxShadow Function snapshot test should match 1`] = `
+Array [
+  "
+  box-shadow: ",
+  "0 2px 8px 2px rgba(0, 0, 0, 0.16)",
+  ";
+  -moz-box-shadow: ",
+  "0 2px 8px 2px rgba(0, 0, 0, 0.16)",
+  ";
+  -webkit-box-shadow: ",
+  "0 2px 8px 2px rgba(0, 0, 0, 0.16)",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions flexDirection Function snapshot test should match 1`] = `
+Array [
+  "
+  flex-direction: ",
+  "row",
+  ";
+  -ms-flex-direction: ",
+  "row",
+  ";
+  -moz-flex-direction: ",
+  "row",
+  ";
+  -webkit-flex-direction: ",
+  "row",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions flexWrap Function snapshot test should match 1`] = `
+Array [
+  "
+  flex-wrap: ",
+  "wrap",
+  ";
+  -ms-flex-wrap: ",
+  "wrap",
+  ";
+  -moz-flex-wrap: ",
+  "wrap",
+  ";
+  -webkit-flex-wrap: ",
+  "wrap",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions flexbox Function snapshot test should match 1`] = `
+Array [
+  "
+  display: flex;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+",
+]
+`;
+
+exports[`mixin Functions justifyContent Function snapshot test should match 1`] = `
+Array [
+  "
+  -ms-flex-pack: ",
+  "center",
+  ";
+  justify-content: ",
+  "center",
+  ";
+  -ms-justify-content: ",
+  "center",
+  ";
+  -moz-justify-content: ",
+  "center",
+  ";
+  -webkit-justify-content: ",
+  "center",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions linearGradient Function snapshot test should match 1`] = `
+Array [
+  "
+    background: nth(nth(",
+  ", 1), 1);
+    background: linear-gradient(",
+  "180deg",
+  ", ",
+  ");
+    background: -webkit-linear-gradient(
+      legacy-direction(",
+  "180deg",
+  "),
+      ",
+  "
+    );
+  ",
+]
+`;
+
+exports[`mixin Functions linearGradient Function snapshot test should match 2`] = `
+Array [
+  "
+    background: nth(nth(",
+  "rgba(0, 0, 0, 0) 44%",
+  ", 1), 1);
+    background: linear-gradient(",
+  "180deg",
+  ", ",
+  "rgba(0, 0, 0, 0) 44%",
+  ");
+    background: -webkit-linear-gradient(
+      legacy-direction(",
+  "180deg",
+  "),
+      ",
+  "rgba(0, 0, 0, 0) 44%",
+  "
+    );
+  ",
+]
+`;
+
+exports[`mixin Functions respondTo Function snapshot test should match 1`] = `
+Array [
+  "
+    @media (max-width: ",
+  "1023",
+  "px) {
+      ",
+  "background-color: red",
+  ";
+    }
+  ",
+]
+`;
+
+exports[`mixin Functions respondTo Function snapshot test should match 2`] = `
+Array [
+  "
+    @media (max-width: ",
+  "1919",
+  "px) {
+      ",
+  "background-color: red",
+  ";
+    }
+  ",
+]
+`;
+
+exports[`mixin Functions respondTo Function snapshot test should match 3`] = `
+Array [
+  "
+    @media (max-width: ",
+  "1367",
+  "px) {
+      ",
+  "background-color: red",
+  ";
+    }
+  ",
+]
+`;
+
+exports[`mixin Functions respondTo Function snapshot test should match 4`] = `
+Array [
+  "
+    @media (max-width: ",
+  "750",
+  "px) {
+      ",
+  "background-color: red",
+  ";
+    }
+  ",
+]
+`;
+
+exports[`mixin Functions transform Function snapshot test should match 1`] = `
+Array [
+  "
+  transform: ",
+  "translate(0, 100%)",
+  ";
+  -o-transform: ",
+  "translate(0, 100%)",
+  ";
+  -ms-transform: ",
+  "translate(0, 100%)",
+  ";
+  -moz-transform: ",
+  "translate(0, 100%)",
+  ";
+  -webkit-transform: ",
+  "translate(0, 100%)",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions transformOrigin Function snapshot test should match 1`] = `
+Array [
+  "
+  transform-origin: ",
+  "50% 50%",
+  ";
+  -o-transform-origin: ",
+  "50% 50%",
+  ";
+  -ms-transform-origin: ",
+  "50% 50%",
+  ";
+  -moz-transform-origin: ",
+  "50% 50%",
+  ";
+  -webkit-transform-origin: ",
+  "50% 50%",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions transformStyle Function snapshot test should match 1`] = `
+Array [
+  "
+  transform-style: ",
+  "50px",
+  ";
+  -o-transform-style: ",
+  "50px",
+  ";
+  -ms-transform-style: ",
+  "50px",
+  ";
+  -moz-transform-style: ",
+  "50px",
+  ";
+  -webkit-transform-style: ",
+  "50px",
+  ";
+",
+]
+`;
+
+exports[`mixin Functions transition Function snapshot test should match 1`] = `
+Array [
+  "
+  transition: ",
+  "all 500ms linear",
+  ";
+  -o-transition: ",
+  "all 500ms linear",
+  ";
+  -ms-transition: ",
+  "all 500ms linear",
+  ";
+  -moz-transition: ",
+  "all 500ms linear",
+  ";
+  -webkit-transition: ",
+  "all 500ms linear",
+  ";
+",
+]
+`;

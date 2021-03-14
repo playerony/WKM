@@ -1,4 +1,4 @@
-import { Variable } from '../src/styles/variables'
+import { Variable } from '@styles/variables'
 
 declare module 'styled-components' {
   interface DefaultTheme extends Variable {}
