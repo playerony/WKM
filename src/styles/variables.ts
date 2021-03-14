@@ -11,14 +11,17 @@ export interface Padding {
   medium: number
 }
 
+export type Font = 'normal' | 'bold'
+
+export type Color = 'red' | 'gray' | 'black' | 'cream' | 'white' | 'orange' | 'purple'
+
 export interface Variable {
   baseFontSize: number
   color: {
-    [key: string]: string
+    [key in Color]: string
   }
   font: {
-    normal: string
-    bold: string
+    [key in Font]: string
   }
   padding: Padding
   breakpoint: Breakpoint
@@ -28,32 +31,13 @@ const variables: Variable = {
   baseFontSize: 16,
 
   color: {
-    purple200: '#dbe3f4',
-    purple500: '#ccccff',
-    purple700: '#6084fa',
-
-    blue100: '#f8fbff',
-    blue500: '#48adf1',
-    blue700: '#0094ff',
-    blue800: '#274f6f',
-
-    red300: '#debae2',
-    red500: '#ff516d',
-
-    green200: '#ccffcf',
-    green400: '#32f4cd',
-    green500: '#48f1b4',
-    green600: '#02d57c',
-
-    gray300: '#eeeeee',
-    gray400: '#666666',
-    gray500: '#c9c9c9',
-    gray600: '#979797',
-    gray700: '#999999',
-    gray900: '#26282b',
-
-    white: '#ffffff',
-    black: '#16161a'
+    red: '#E81F25',
+    gray: '#707070',
+    black: '#16161a',
+    cream: '#FBF7F3',
+    white: '#FFFFFF',
+    orange: '#E4572E',
+    purple: '#6B5B95',
   },
   font: {
     normal: "'HelveticaNeue', Helvetica, Arial, sans-serif",
