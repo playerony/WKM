@@ -7,7 +7,11 @@ import snapshotTest from '@tests/snapshotTest'
 import ThemeProviderMock from '@tests/ThemeProviderMock'
 
 describe('ResetStyles Component', () => {
-  renderer.create(<ThemeProviderMock><GlobalStyles /></ThemeProviderMock>)
+  renderer.create(
+    <ThemeProviderMock>
+      <GlobalStyles />
+    </ThemeProviderMock>
+  )
 
   snapshotTest(document.head)
 })

@@ -20,5 +20,5 @@ module.exports = {
     '@pages/(.*)': '<rootDir>/src/pages/$1',
     '@styles/(.*)': '<rootDir>/src/styles/$1',
     '@providers/(.*)': '<rootDir>/src/hooks/$1'
-  },
+  }
 }
