@@ -1,7 +1,7 @@
 import variables from '../variables'
 
+import snapshotTest from '@tests/snapshotTest'
+
 describe('variables file', () => {
-  it('should match snapshot', () => {
-    expect(variables).toMatchSnapshot()
-  })
+  snapshotTest(variables)
 })

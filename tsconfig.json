@@ -32,6 +32,7 @@
       "@tests/*": ["src/tests/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
+      "@utilities/*": ["src/utilities/*"],
       "@providers/*": ["src/providers/*"]
     }
   },
