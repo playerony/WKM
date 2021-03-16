@@ -1,18 +1,25 @@
 import React from 'react'
 
 import Logo from './Logo/Logo.component'
+import { WelcomeProps } from './Welcome.types'
 
-import homeVideo from '@public/home_page_video.mp4'
 import {
   StyledVideo,
   StyledButton,
   StyledWrapper,
   StyledVideoMask
 } from './Welcome.styles'
+import homeVideo from '@public/home_page_video.mp4'
 
-const Welcome = (): JSX.Element => (
+const Welcome = ({ onVideoLoad }: WelcomeProps): JSX.Element => (
   <StyledWrapper>
-    <StyledVideo src={homeVideo} autoPlay={true} muted={true} loop={true} />
+    <StyledVideo
+      loop={true}
+      muted={true}
+      src={homeVideo}
+      autoPlay={true}
+      onLoadedData={onVideoLoad}
+    />
     <StyledVideoMask />
     <Logo />
     <StyledButton>Czym jest WKM</StyledButton>
