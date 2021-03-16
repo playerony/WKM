@@ -1,35 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`variables file should match snapshot 1`] = `
-Object {
-  "baseFontSize": 16,
-  "breakpoint": Object {
-    "largeScreen": 1919,
-    "mediumScreen": 1367,
-    "mobileScreen": 750,
-    "smallScreen": 1023,
-  },
-  "color": Object {
-    "black": "#16161a",
-    "cream": "#FBF7F3",
-    "gray": "#707070",
-    "orange": "#E4572E",
-    "purple": "#6B5B95",
-    "red": "#E81F25",
-    "white": "#FFFFFF",
-  },
-  "font": Object {
-    "bold": "'HelveticaNeueBold', Helvetica, Arial, sans-serif",
-    "normal": "'HelveticaNeue', Helvetica, Arial, sans-serif",
-  },
-  "padding": Object {
-    "big": 60,
-    "medium": 40,
-    "small": 20,
-  },
-}
-`;
-
 exports[`variables file snapshot test should match 1`] = `
 Object {
   "baseFontSize": 16,
