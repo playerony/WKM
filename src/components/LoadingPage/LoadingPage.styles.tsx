@@ -15,11 +15,13 @@ export const StyledWrapper = styled.div<{ isLoading: boolean }>`
   ${alignItems('center')}
   ${justifyContent('center')}
 
-  ${({ isLoading }) => !isLoading && css`
-    ${animation('disable-loader .5s linear')}
-    animation-delay: .5s;
-    -webkit-animation-fill-mode: forwards;
-  `}
+  ${({ isLoading }) =>
+    !isLoading &&
+    css`
+      ${animation('disable-loader .5s linear')}
+      animation-delay: .5s;
+      -webkit-animation-fill-mode: forwards;
+    `}
 
   @keyframes disable-loader {
     0% {
@@ -43,7 +45,8 @@ export const StyledLoaderFragment = styled.div`
   box-sizing: border-box;
   border: 8px solid ${({ theme }) => theme.color.cream};
   animation: loader-rotation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: ${({ theme }) => theme.color.cream} transparent transparent transparent;
+  border-color: ${({ theme }) => theme.color.cream} transparent transparent
+    transparent;
 
   @keyframes loader-rotation {
     0% {
