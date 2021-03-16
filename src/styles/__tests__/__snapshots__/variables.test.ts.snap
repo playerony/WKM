@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`variables file should match snapshot 1`] = `
+exports[`variables file snapshot test should match 1`] = `
 Object {
   "baseFontSize": 16,
   "breakpoint": Object {
@@ -28,4 +28,4 @@ Object {
     "small": 20,
   },
 }
-`
+`;

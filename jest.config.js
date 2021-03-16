@@ -1,7 +1,7 @@
 module.exports = {
   globals: {
     'ts-jest': {
-      tsconfig: './tsconfig.json'
+      tsconfig: './tsconfig.test.json'
     }
   },
   moduleFileExtensions: ['js', 'ts', 'tsx'],
@@ -19,6 +19,8 @@ module.exports = {
     '@tests/(.*)': '<rootDir>/src/tests/$1',
     '@pages/(.*)': '<rootDir>/src/pages/$1',
     '@styles/(.*)': '<rootDir>/src/styles/$1',
-    '@providers/(.*)': '<rootDir>/src/hooks/$1'
+    '@providers/(.*)': '<rootDir>/src/providers/$1',
+    '@utilities/(.*)': '<rootDir>/src/utilities/$1',
+    '@components/(.*)': '<rootDir>/src/components/$1'
   }
 }

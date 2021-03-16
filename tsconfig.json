@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "lib": [
       "dom",
       "es2017"
@@ -28,11 +28,27 @@
       "./types"
     ],
     "paths": {
-      "@public/*": ["public/*"],
-      "@tests/*": ["src/tests/*"],
-      "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"],
-      "@providers/*": ["src/providers/*"]
+      "@public/*": [
+        "public/*"
+      ],
+      "@tests/*": [
+        "src/tests/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@utilities/*": [
+        "src/utilities/*"
+      ],
+      "@providers/*": [
+        "src/providers/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ]
     }
   },
   "include": [
