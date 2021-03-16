@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-import { flexbox, alignItems, justifyContent, flexDirection } from '@styles/mixin'
+import {
+  flexbox,
+  alignItems,
+  justifyContent,
+  flexDirection
+} from '@styles/mixin'
 
 export const StyledWrapper = styled.section`
   width: 100%;
