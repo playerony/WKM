@@ -25,3 +25,10 @@ export const StyledVideoMask = styled.div`
   position: absolute;
   background-color: ${({ theme }) => theme.color.purple}33;
 `
+
+export const StyledContentWrapper = styled.section`
+  display: block;
+  position absolute;
+  padding: ${({ theme }) =>
+    `${theme.padding.big * 5}px ${theme.padding.big * 4}px`}
+`

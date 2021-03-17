@@ -13,8 +13,6 @@ const HomePage = (): JSX.Element => {
   const [lastScrollTop, setLastScrollTop] = useState<number>(0)
   const [videoLoaded, setVideoLoaded] = useState<boolean>(false)
 
-  const onVideoLoad = (): void => setVideoLoaded(true)
-
   useEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     const isScrollTop = scrollTop > lastScrollTop
@@ -36,9 +34,13 @@ const HomePage = (): JSX.Element => {
     })
   }, [page])
 
+  const onVideoLoad = (): void => setVideoLoaded(true)
+
+  const onButtonClick = (): void => setPage(page + 1)
+
   return (
     <section>
-      <Welcome onVideoLoad={onVideoLoad} />
+      <Welcome onVideoLoad={onVideoLoad} onButtonClick={onButtonClick} />
       <History />
       <LoadingPage isLoading={!videoLoaded} />
     </section>

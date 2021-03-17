@@ -11,18 +11,18 @@ import {
 } from './Welcome.styles'
 import homeVideo from '@public/home_page_video.mp4'
 
-const Welcome = ({ onVideoLoad }: WelcomeProps): JSX.Element => (
+const Welcome = ({ onVideoLoad, onButtonClick }: WelcomeProps): JSX.Element => (
   <StyledWrapper>
     <StyledVideo
       loop={true}
       muted={true}
       src={homeVideo}
       autoPlay={true}
-      onLoadedData={onVideoLoad}
+      onPlay={onVideoLoad}
     />
     <StyledVideoMask />
     <Logo />
-    <StyledButton>Czym jest WKM</StyledButton>
+    <StyledButton onClick={onButtonClick}>Czym jest WKM</StyledButton>
   </StyledWrapper>
 )
 

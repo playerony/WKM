@@ -31,14 +31,20 @@ export const StyledButton = styled.span`
   bottom: 70px;
   width: 126px;
   font-size: 12px;
+  cursor: pointer;
   position: absolute;
   margin-left: -63px;
   text-align: center;
   letter-spacing: 2px;
   padding-bottom: 9px;
   text-transform: uppercase;
+  background-color: transparent;
   color: ${({ theme }) => theme.color.cream};
   padding-top: ${({ theme }) => theme.padding.small / 2}px;
   border-top: 1px solid ${({ theme }) => theme.color.cream}55;
   border-bottom: 1px solid ${({ theme }) => theme.color.cream}55;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.cream}22;
+  }
 `
