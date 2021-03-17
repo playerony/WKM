@@ -8,7 +8,7 @@ export const StyledWrapper = styled.div<{ isLoading: boolean }>`
   width: 100%;
   z-index: 10;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: ${({ theme }) => theme.color.black};
 
   ${flexbox()}
@@ -26,12 +26,10 @@ export const StyledWrapper = styled.div<{ isLoading: boolean }>`
   @keyframes disable-loader {
     0% {
       opacity: 1;
-      display: block;
     }
     100% {
       opacity: 0;
-      z-index: 0;
-      display: none;
+      visibility: hidden;
     }
   }
 `

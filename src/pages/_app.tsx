@@ -4,12 +4,14 @@ import NextApp from 'next/app'
 
 import AppProvider from '@providers/AppProvider'
 
+import '../../antd.less'
+
+if (typeof window === 'undefined') {
+  global.window = {} as any
+}
+
 export default class App extends NextApp {
   render() {
-    if (typeof window === 'undefined') {
-      global.window = {} as any
-    }
-
     const { Component, pageProps, router } = this.props
 
     return (
