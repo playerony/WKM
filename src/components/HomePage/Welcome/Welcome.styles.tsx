@@ -12,10 +12,9 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledVideo = styled.video`
-  max-width: none;
+  min-width: 100%;
   min-height: 100%;
-  object-fit: contain;
-  object-position: 50% 50%;
+  object-fit: cover;
 `
 
 export const StyledVideoMask = styled.div`

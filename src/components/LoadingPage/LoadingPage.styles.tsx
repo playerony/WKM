@@ -30,6 +30,7 @@ export const StyledWrapper = styled.div<{ isLoading: boolean }>`
     }
     100% {
       opacity: 0;
+      z-index: 0;
       display: none;
     }
   }

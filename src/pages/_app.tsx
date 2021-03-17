@@ -6,6 +6,10 @@ import AppProvider from '@providers/AppProvider'
 
 export default class App extends NextApp {
   render() {
+    if (typeof window === 'undefined') {
+      global.window = {} as any
+    }
+
     const { Component, pageProps, router } = this.props
 
     return (

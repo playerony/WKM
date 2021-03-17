@@ -18,6 +18,7 @@ module.exports = {
 
     '@tests/(.*)': '<rootDir>/src/tests/$1',
     '@pages/(.*)': '<rootDir>/src/pages/$1',
+    '@hooks/(.*)': '<rootDir>/src/hooks/$1',
     '@styles/(.*)': '<rootDir>/src/styles/$1',
     '@providers/(.*)': '<rootDir>/src/providers/$1',
     '@utilities/(.*)': '<rootDir>/src/utilities/$1',
