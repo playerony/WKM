@@ -1,11 +1,13 @@
 out
 .env
 .next
+*.md
 *.sh
 *.svg
 *.yml
 *.json
 public
+.DS_Store
 .eslintrc
 .env.dist
 .gitignore
