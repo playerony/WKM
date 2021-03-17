@@ -16,7 +16,7 @@ const HomePage = (): JSX.Element => {
   const onVideoLoad = (): void => setVideoLoaded(true)
 
   useEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     const isScrollTop = scrollTop > lastScrollTop
 
     if (isScrollTop && page < PAGES) {
