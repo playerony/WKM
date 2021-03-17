@@ -11,7 +11,7 @@ const HomePage = (): JSX.Element => {
   return (
     <section>
       <Welcome onVideoLoad={onVideoLoad} />
-      <LoadingPage isLoading={videoLoaded} />
+      <LoadingPage isLoading={!videoLoaded} />
     </section>
   )
 }
