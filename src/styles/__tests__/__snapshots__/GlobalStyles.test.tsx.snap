@@ -9,4 +9,4 @@ exports[`ResetStyles Component snapshot test should match 1`] = `
     html,body{color:#707070;font-family:'HelveticaNeue',Helvetica,Arial,sans-serif;background-color:#16161a;}
   </style>
 </head>
-`
+`;
