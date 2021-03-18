@@ -15,7 +15,7 @@ export const StyledLeftArrow = styled(LeftOutlined)<ArrowProps>`
   &&& {
     top: 50%;
     z-index: 5;
-    opacity: .7;
+    opacity: 0.7;
     position: absolute;
     color: ${({ theme }) => theme.color.cream};
     left: ${({ theme }) => theme.padding.big}px;
@@ -36,7 +36,7 @@ export const StyledLeftArrow = styled(LeftOutlined)<ArrowProps>`
 export const StyledRightArrow = styled(RightOutlined)<ArrowProps>`
   &&& {
     top: 50%;
-    opacity: .7;
+    opacity: 0.7;
     z-index: 5;
     position: absolute;
     color: ${({ theme }) => theme.color.cream};
