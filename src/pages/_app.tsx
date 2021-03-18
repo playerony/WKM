@@ -6,10 +6,6 @@ import AppProvider from '@providers/AppProvider'
 
 import '../../antd.less'
 
-if (typeof window === 'undefined') {
-  global.window = {} as any
-}
-
 export default class App extends NextApp {
   render() {
     const { Component, pageProps, router } = this.props
