@@ -1,5 +1,5 @@
-import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import styled, { css } from 'styled-components'
+import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 
 import { transform } from '@styles/mixin'
 

@@ -1,13 +1,12 @@
 import React from 'react'
-
 import AntdCarousel from 'antd/lib/carousel'
 
-import { CarouselProps } from './Carousel.types'
 import {
   StyledWrapper,
   StyledLeftArrow,
   StyledRightArrow
 } from './Carousel.styles'
+import { CarouselProps } from './Carousel.types'
 
 const Carousel = ({
   setPage,
