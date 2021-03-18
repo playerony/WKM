@@ -8,19 +8,19 @@ import {
   StyledWrapper,
   StyledVideoMask,
   StyledContentWrapper
-} from './History.styles'
+} from './Idea.styles'
 import variables from '@styles/variables'
 
-import historyVideo from '@public/history_page_video.mp4'
+import ideaVideo from '@public/idea_page_video.mp4'
 
 const { Text, Title } = Typography
 
-const History = (): JSX.Element => (
+const Idea = (): JSX.Element => (
   <StyledWrapper>
-    <StyledVideo loop={true} muted={true} autoPlay={true} src={historyVideo} />
+    <StyledVideo loop={true} muted={true} autoPlay={true} src={ideaVideo} />
     <StyledVideoMask />
     <StyledContentWrapper>
-      <Title style={{ color: variables.color.cream }}>Historia</Title>
+      <Title style={{ color: variables.color.cream }}>Pomysł</Title>
       <Divider style={{ borderTopColor: variables.color.cream }} />
       <Text
         style={{
@@ -31,12 +31,12 @@ const History = (): JSX.Element => (
           color: variables.color.cream
         }}
       >
-        Historia powstania klubu, to historia ludzi, którzy zarazili nas swoją
-        pasją, stylem życia i miłością do motocykli. Nie sposób nie wymienić
-        takich nazwisk jak Bartek KOSAR, Mirek BANIA czy Rafał GÓRSKI.
+        Sam pomysł stworzenia klubu zrodził się w ich głowach dopiero wiosną
+        2008 roku podczas wypadu na Słowację. Tam właśnie padły pierwsze
+        pomysły, w tym nasza obecna nazwa.
       </Text>
     </StyledContentWrapper>
   </StyledWrapper>
 )
 
-export default History
+export default Idea

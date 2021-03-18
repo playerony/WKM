@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 
-import Carousel from '@components/common/Carousel/Carousel.component'
-
+import Idea from '@components/HomePage/Idea/Idea.component'
 import History from '@components/HomePage/History/History.component'
 import Welcome from '@components/HomePage/Welcome/Welcome.component'
+import Carousel from '@components/common/Carousel/Carousel.component'
 import LoadingPage from '@components/LoadingPage/LoadingPage.component'
 
 const HomePage = (): JSX.Element => {
@@ -21,6 +21,7 @@ const HomePage = (): JSX.Element => {
       <Carousel setPage={setPage} currentPage={page} carouselRef={carouselRef}>
         <Welcome onVideoLoad={onVideoLoad} onButtonClick={onButtonClick} />
         <History />
+        <Idea />
       </Carousel>
       <LoadingPage isLoading={!videoLoaded} />
     </>
