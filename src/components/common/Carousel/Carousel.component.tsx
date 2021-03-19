@@ -8,14 +8,18 @@ import {
 } from './Carousel.styles'
 import { CarouselProps } from './Carousel.types'
 
+import flatten from '@utilities/flatten'
+
 const Carousel = ({
   setPage,
   children,
   currentPage,
   carouselRef
 }: CarouselProps): JSX.Element => {
+  const getChildrenCount = (): number => flatten(children).length
+
   const nextSlide = (): void =>
-    currentPage + 1 < children.length && carouselRef.current.next()
+    currentPage + 1 < getChildrenCount() && carouselRef.current.next()
 
   const prevSlide = (): void => currentPage > 0 && carouselRef.current.prev()
 
@@ -27,7 +31,7 @@ const Carousel = ({
       </AntdCarousel>
       <StyledRightArrow
         onClick={nextSlide}
-        isDisabled={currentPage === children.length - 1}
+        isDisabled={currentPage === getChildrenCount() - 1}
       />
     </StyledWrapper>
   )
