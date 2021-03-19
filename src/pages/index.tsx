@@ -1,10 +1,31 @@
 import React, { useRef, useState } from 'react'
 
-import Idea from '@components/HomePage/Idea/Idea.component'
-import History from '@components/HomePage/History/History.component'
 import Welcome from '@components/HomePage/Welcome/Welcome.component'
 import Carousel from '@components/common/Carousel/Carousel.component'
 import LoadingPage from '@components/LoadingPage/LoadingPage.component'
+import HistorySlide from '@components/HomePage/HistorySlide/HistorySlide.component'
+
+import ideaSlideVideo from '@public/idea_slide_video.mp4'
+import historySlideVideo from '@public/history_slide_video.mp4'
+import developmentSlideVideo from '@public/development_slide_video.mp4'
+
+const slides = [
+  {
+    title: 'Historia',
+    backgroundVideo: historySlideVideo,
+    description: `Historia powstania klubu, to historia ludzi, którzy zarazili nas swoją pasją, stylem życia i miłością do motocykli. Nie sposób nie wymienić takich nazwisk jak Bartek KOSAR, Mirek BANIA czy Rafał GÓRSKI.`
+  },
+  {
+    title: 'Pomysł',
+    backgroundVideo: ideaSlideVideo,
+    description: `Sam pomysł stworzenia klubu zrodził się w ich głowach dopiero wiosną 2008 roku podczas wypadu na Słowację. Tam właśnie padły pierwsze pomysły, w tym nasza obecna nazwa.`
+  },
+  {
+    title: 'Rozwój',
+    backgroundVideo: developmentSlideVideo,
+    description: `Kolejne lata przyniosły ze sobą dalszy rozwój, podjęcie współpracy i zawarcie przyjaźni z innymi klubami, w tym m.in. z Blue Knights. Udzielamy się w licznych imprezach charytatywnych, w 2012 roku przyłączyliśmy się do 20-go Finału WOŚP w Gliwicach. Od czasu założenia WKM przydarzyło się wiele bliższych i dalszych, pełnych przygód, radości, a czasami także trudnych chwil, podróży na dwóch kółkach.`
+  }
+]
 
 const HomePage = (): JSX.Element => {
   const carouselRef: any = useRef()
@@ -20,8 +41,7 @@ const HomePage = (): JSX.Element => {
     <>
       <Carousel setPage={setPage} currentPage={page} carouselRef={carouselRef}>
         <Welcome onVideoLoad={onVideoLoad} onButtonClick={onButtonClick} />
-        <History />
-        <Idea />
+        {React.Children.toArray(slides.map(slide => <HistorySlide {...slide} />))}
       </Carousel>
       <LoadingPage isLoading={!videoLoaded} />
     </>
