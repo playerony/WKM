@@ -41,7 +41,9 @@ const HomePage = (): JSX.Element => {
     <>
       <Carousel setPage={setPage} currentPage={page} carouselRef={carouselRef}>
         <Welcome onVideoLoad={onVideoLoad} onButtonClick={onButtonClick} />
-        {React.Children.toArray(slides.map(slide => <HistorySlide {...slide} />))}
+        {React.Children.toArray(
+          slides.map((slide) => <HistorySlide {...slide} />)
+        )}
       </Carousel>
       <LoadingPage isLoading={!videoLoaded} />
     </>
