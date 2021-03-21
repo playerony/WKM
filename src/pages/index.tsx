@@ -30,7 +30,7 @@ const slides = [
 const HomePage = (): JSX.Element => {
   const carouselRef: any = useRef()
 
-  const [page, setPage] = useState<number>(0)
+  const [_, setPage] = useState<number>(0)
   const [videoLoaded, setVideoLoaded] = useState<boolean>(false)
 
   const onVideoLoad = (): void => setVideoLoaded(true)
@@ -39,7 +39,7 @@ const HomePage = (): JSX.Element => {
 
   return (
     <>
-      <Carousel setPage={setPage} currentPage={page} carouselRef={carouselRef}>
+      <Carousel setPage={setPage} carouselRef={carouselRef}>
         <Welcome onVideoLoad={onVideoLoad} onButtonClick={onButtonClick} />
         {React.Children.toArray(
           slides.map((slide) => <HistorySlide {...slide} />)

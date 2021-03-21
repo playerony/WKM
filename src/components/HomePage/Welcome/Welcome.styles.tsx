@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { flexbox } from '@styles/mixin'
+import { flexbox, transition, respondTo } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
   width: 100%;
@@ -44,7 +44,14 @@ export const StyledButton = styled.span`
   border-top: 1px solid ${({ theme }) => theme.color.cream}55;
   border-bottom: 1px solid ${({ theme }) => theme.color.cream}55;
 
+  ${transition('all 300ms linear')}
+  ${respondTo.mobileScreen`
+    width: 110px;
+    font-size: 10px;
+    margin-left: -55px;
+  `}
+
   &:hover {
-    background-color: ${({ theme }) => theme.color.cream}22;
+    background-color: ${({ theme }) => theme.color.cream}17;
   }
 `

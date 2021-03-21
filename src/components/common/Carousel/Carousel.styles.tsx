@@ -1,17 +1,13 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 
-import { transform, transition } from '@styles/mixin'
+import { transform, transition, respondTo } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
   position: relative;
 `
 
-interface ArrowProps {
-  isDisabled: boolean
-}
-
-export const StyledLeftArrow = styled(LeftOutlined)<ArrowProps>`
+export const StyledLeftArrow = styled(LeftOutlined)`
   &&& {
     top: 50%;
     z-index: 5;
@@ -24,16 +20,18 @@ export const StyledLeftArrow = styled(LeftOutlined)<ArrowProps>`
     ${transform(`translateY(-50%)`)}
     ${transition('color 300ms linear')}
 
-    ${({ theme, isDisabled }) =>
-      isDisabled &&
-      css`
-        cursor: default;
-        color: ${theme.color.gray};
-      `}
+    ${({ theme }) => respondTo.smallScreen`
+      font-size: 50px;
+      left: ${theme.padding.medium}px;
+    `}
+
+    ${respondTo.mobileScreen`
+      display: none;
+    `}
   }
 `
 
-export const StyledRightArrow = styled(RightOutlined)<ArrowProps>`
+export const StyledRightArrow = styled(RightOutlined)`
   &&& {
     top: 50%;
     opacity: 0.7;
@@ -46,11 +44,13 @@ export const StyledRightArrow = styled(RightOutlined)<ArrowProps>`
     ${transform(`translateY(-50%)`)}
     ${transition('color 500ms linear')}
 
-    ${({ theme, isDisabled }) =>
-      isDisabled &&
-      css`
-        cursor: default;
-        color: ${theme.color.gray};
-      `}
+    ${({ theme }) => respondTo.smallScreen`
+      font-size: 50px;
+      right: ${theme.padding.medium}px;
+    `}
+
+    ${respondTo.mobileScreen`
+      display: none;
+    `}
   }
 `
