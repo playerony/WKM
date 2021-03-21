@@ -30,7 +30,10 @@ const GridGallery = ({ gap = 15, elements }: GridGalleryProps): JSX.Element => {
       <StyledWrapper gap={gap}>
         {React.Children.toArray(
           elements.map(({ src, ...restProps }) => (
-            <StyledGalleryElement onClick={onGalleryElementClick(src)} {...restProps}>
+            <StyledGalleryElement
+              onClick={onGalleryElementClick(src)}
+              {...restProps}
+            >
               <StyledGalleryImage src={src} />
             </StyledGalleryElement>
           ))
