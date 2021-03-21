@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 
+import Gallery from '@components/HomePage/Gallery/Gallery.component'
 import Welcome from '@components/HomePage/Welcome/Welcome.component'
 import Carousel from '@components/common/Carousel/Carousel.component'
 import LoadingPage from '@components/LoadingPage/LoadingPage.component'
@@ -44,6 +45,7 @@ const HomePage = (): JSX.Element => {
         {React.Children.toArray(
           slides.map((slide) => <HistorySlide {...slide} />)
         )}
+        <Gallery />
       </Carousel>
       <LoadingPage isLoading={!videoLoaded} />
     </>
