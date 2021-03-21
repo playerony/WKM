@@ -10,8 +10,8 @@ import galleryImage2 from '@public/gallery/gallery_2.jpg'
 import galleryImage3 from '@public/gallery/gallery_3.jpg'
 import galleryImage4 from '@public/gallery/gallery_4.jpg'
 import galleryImage5 from '@public/gallery/gallery_5.jpg'
-import galleryImage6 from '@public/gallery/gallery_9.jpg'
 import galleryImage7 from '@public/gallery/gallery_7.jpg'
+import galleryImage9 from '@public/gallery/gallery_9.jpg'
 
 const mobileScreenGalleryElements = [
   {
@@ -26,7 +26,7 @@ const mobileScreenGalleryElements = [
     rowStart: 1,
     columnEnd: 9,
     columnStart: 5,
-    src: galleryImage6
+    src: galleryImage9
   },
   {
     rowEnd: 4,
@@ -78,7 +78,7 @@ const largeScreenGalleryElements = [
     rowStart: 1,
     columnEnd: 5,
     columnStart: 3,
-    src: galleryImage6
+    src: galleryImage9
   },
   {
     rowEnd: 5,
