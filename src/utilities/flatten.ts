@@ -1,9 +1,13 @@
 const flatten = (array: any[]): any[] => {
-  return array.reduce((flat, toFlatten) => {
-    return flat.concat(
-      Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten
-    )
-  }, [])
+  if (!array?.length) {
+    return []
+  }
+
+  return array.reduce(
+    (result, value) =>
+      result.concat(Array.isArray(value) ? flatten(value) : value),
+    []
+  )
 }
 
 export default flatten
