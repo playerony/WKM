@@ -7,9 +7,9 @@ import Carousel from '@components/common/Carousel/Carousel.component'
 import LoadingPage from '@components/LoadingPage/LoadingPage.component'
 import HistorySlide from '@components/HomePage/HistorySlide/HistorySlide.component'
 
-import ideaSlideVideo from '@public/idea_slide_video.mp4'
-import historySlideVideo from '@public/history_slide_video.mp4'
-import developmentSlideVideo from '@public/development_slide_video.mp4'
+import ideaSlideVideo from '@public/video/idea_slide_video.mp4'
+import historySlideVideo from '@public/video/history_slide_video.mp4'
+import developmentSlideVideo from '@public/video/development_slide_video.mp4'
 
 const slides = [
   {

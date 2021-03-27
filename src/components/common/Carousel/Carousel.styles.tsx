@@ -14,16 +14,11 @@ export const StyledLeftArrow = styled(LeftOutlined)`
     opacity: 0.7;
     position: absolute;
     color: ${({ theme }) => theme.color.cream};
-    left: ${({ theme }) => theme.padding.big}px;
-    font-size: ${({ theme }) => theme.padding.big}px;
+    left: ${({ theme }) => theme.padding.medium}px;
+    font-size: ${({ theme }) => theme.padding.medium}px;
 
     ${transform(`translateY(-50%)`)}
     ${transition('color 300ms linear')}
-
-    ${({ theme }) => respondTo.smallScreen`
-      font-size: 50px;
-      left: ${theme.padding.medium}px;
-    `}
 
     ${respondTo.mobileScreen`
       display: none;
@@ -34,20 +29,15 @@ export const StyledLeftArrow = styled(LeftOutlined)`
 export const StyledRightArrow = styled(RightOutlined)`
   &&& {
     top: 50%;
-    opacity: 0.7;
     z-index: 5;
+    opacity: 0.7;
     position: absolute;
     color: ${({ theme }) => theme.color.cream};
-    right: ${({ theme }) => theme.padding.big}px;
-    font-size: ${({ theme }) => theme.padding.big}px;
+    right: ${({ theme }) => theme.padding.medium}px;
+    font-size: ${({ theme }) => theme.padding.medium}px;
 
     ${transform(`translateY(-50%)`)}
-    ${transition('color 500ms linear')}
-
-    ${({ theme }) => respondTo.smallScreen`
-      font-size: 50px;
-      right: ${theme.padding.medium}px;
-    `}
+    ${transition('color 300ms linear')}
 
     ${respondTo.mobileScreen`
       display: none;

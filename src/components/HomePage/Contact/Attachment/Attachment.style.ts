@@ -3,12 +3,9 @@ import styled from 'styled-components'
 import Typography from 'antd/lib/typography'
 import { FileWordFilled } from '@ant-design/icons'
 
-const { Title } = Typography
+import { transition } from '@styles/mixin'
 
-export const StyledWrapper = styled.div`
-  cursor: pointer;
-  position: relative;
-`
+const { Title } = Typography
 
 export const StyledDownloadIcon = styled(FileWordFilled)`
   &&& {
@@ -17,6 +14,8 @@ export const StyledDownloadIcon = styled(FileWordFilled)`
     font-weight: 300;
     color: ${({ theme }) => theme.color.cream};
     padding-bottom: ${({ theme }) => theme.padding.small}px;
+
+    ${transition('all 300ms')}
   }
 `
 
@@ -27,5 +26,22 @@ export const StyledLabel = styled(Title)`
     font-weight: 300;
     text-align: center;
     color: ${({ theme }) => theme.color.cream};
+
+    ${transition('all 300ms')}
+  }
+`
+
+export const StyledWrapper = styled.div`
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    ${StyledDownloadIcon} {
+      color: ${({ theme }) => theme.color.blue};
+    }
+
+    ${StyledLabel} {
+      color: ${({ theme }) => theme.color.blue};
+    }
   }
 `

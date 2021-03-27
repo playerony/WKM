@@ -4,7 +4,8 @@ import Logo from './Logo/Logo.component'
 import { WelcomeProps } from './Welcome.types'
 
 import { StyledVideo, StyledButton, StyledWrapper, StyledVideoMask } from './Welcome.styles'
-import homeVideo from '@public/home_page_video.mp4'
+
+import homeVideo from '@public/video/home_page_video.mp4'
 
 const Welcome = ({ onVideoLoad, onButtonClick }: WelcomeProps): JSX.Element => (
   <StyledWrapper>

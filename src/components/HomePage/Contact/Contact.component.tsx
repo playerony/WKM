@@ -12,7 +12,7 @@ import {
   StyledDownloadSectionWrapper
 } from './Contact.styles'
 
-import backgroundVideo from '@public/contact_page_video.mp4'
+import backgroundVideo from '@public/video/contact_page_video.mp4'
 
 const Contact = (): JSX.Element => (
   <StyledWrapper>
