@@ -4,9 +4,14 @@ import renderer from 'react-test-renderer'
 import ResetStyles from '../ResetStyles'
 
 import snapshotTest from '@tests/snapshotTest'
+import ThemeProviderMock from '@tests/ThemeProviderMock'
 
-describe('ResetStyles Component', () => {
-  renderer.create(<ResetStyles />)
+describe('GlobalStyles Component', () => {
+  renderer.create(
+    <ThemeProviderMock>
+      <ResetStyles />
+    </ThemeProviderMock>
+  )
 
   snapshotTest(document.head)
 })

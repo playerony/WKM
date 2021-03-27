@@ -6,7 +6,7 @@ import GlobalStyles from '../GlobalStyles'
 import snapshotTest from '@tests/snapshotTest'
 import ThemeProviderMock from '@tests/ThemeProviderMock'
 
-describe('ResetStyles Component', () => {
+describe('GlobalStyles Component', () => {
   renderer.create(
     <ThemeProviderMock>
       <GlobalStyles />

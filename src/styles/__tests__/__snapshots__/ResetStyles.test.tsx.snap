@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResetStyles Component snapshot test should match 1`] = `
+exports[`GlobalStyles Component snapshot test should match 1`] = `
 <head>
   <style
     data-styled="active"
@@ -40,12 +40,12 @@ exports[`ResetStyles Component snapshot test should match 1`] = `
     textarea{overflow:auto;vertical-align:top;}
     table{border-collapse:collapse;border-spacing:0;}
     html,button,input,select,textarea{color:#222;}
-    ::-moz-selection{background:#b3d4fc;text-shadow:none;}
-    ::selection{background:#b3d4fc;text-shadow:none;}
+    ::-moz-selection{background:#1890ff;text-shadow:none;}
+    ::selection{background:#1890ff;text-shadow:none;}
     img{vertical-align:middle;}
     fieldset{border:0;margin:0;padding:0;}
     textarea{resize:vertical;}
     .chromeframe{margin:0.2em 0;background:#ccc;color:#000;padding:0.2em 0;}
   </style>
 </head>
-`
+`;

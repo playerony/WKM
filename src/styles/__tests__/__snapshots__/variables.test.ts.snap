@@ -11,8 +11,9 @@ Object {
   },
   "color": Object {
     "black": "#16161a",
+    "blue": "#1890ff",
     "cream": "#FBF7F3",
-    "gray": "#707070",
+    "gray": "#AAAAAA",
     "orange": "#E4572E",
     "purple": "#6B5B95",
     "red": "#E81F25",
@@ -20,7 +21,7 @@ Object {
   },
   "font": Object {
     "bold": "'HelveticaNeueBold', Helvetica, Arial, sans-serif",
-    "normal": "'HelveticaNeue', Helvetica, Arial, sans-serif",
+    "normal": "'Montserrat', sans-serif",
   },
   "padding": Object {
     "big": 60,
@@ -28,4 +29,4 @@ Object {
     "small": 20,
   },
 }
-`
+`;

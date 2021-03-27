@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResetStyles Component snapshot test should match 1`] = `
+exports[`GlobalStyles Component snapshot test should match 1`] = `
 <head>
   <style
     data-styled="active"
     data-styled-version="5.2.1"
   >
-    html,body{color:#707070;font-family:'HelveticaNeue',Helvetica,Arial,sans-serif;background-color:#16161a;}
+    html,body{color:#AAAAAA;font-family:'Montserrat',sans-serif;background-color:#16161a;}
+    input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 30px #AAABBB inset !important;}
   </style>
 </head>
-`
+`;
