@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import Input from 'antd/lib/input'
-import Typography from 'antd/lib/Typography'
+import Typography from 'antd/lib/typography'
 
 import { transition } from '@styles/mixin'
 
