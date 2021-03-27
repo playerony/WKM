@@ -181,11 +181,11 @@ const ResetStyle = createGlobalStyle`
     color: #222;
   }
   ::-moz-selection {
-    background: #b3d4fc;
+    background: ${({ theme }) => theme.color.blue};
     text-shadow: none;
   }
   ::selection {
-    background: #b3d4fc;
+    background: ${({ theme }) => theme.color.blue};
     text-shadow: none;
   }
   img {

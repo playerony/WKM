@@ -1,13 +1,7 @@
 import styled from 'styled-components'
 import Typography from 'antd/lib/typography'
 
-import {
-  flexbox,
-  respondTo,
-  alignItems,
-  flexDirection,
-  justifyContent
-} from '@styles/mixin'
+import { flexbox, respondTo, alignItems, flexDirection, justifyContent } from '@styles/mixin'
 
 const { Title } = Typography
 

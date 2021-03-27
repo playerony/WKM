@@ -13,8 +13,7 @@ module.exports = {
   preset: 'ts-jest',
   setupFilesAfterEnv: ['<rootDir>/setupEnzyme.ts'],
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/fileMock.js',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/fileMock.js',
 
     '@tests/(.*)': '<rootDir>/src/tests/$1',
     '@pages/(.*)': '<rootDir>/src/pages/$1',

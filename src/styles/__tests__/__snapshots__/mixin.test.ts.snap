@@ -63,9 +63,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions borderRadius Function snapshot test should match 1`
-] = `
+exports[`mixin Functions borderRadius Function snapshot test should match 1`] = `
 Array [
   "
   border-radius: ",
@@ -97,9 +95,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions flexDirection Function snapshot test should match 1`
-] = `
+exports[`mixin Functions flexDirection Function snapshot test should match 1`] = `
 Array [
   "
   flex-direction: ",
@@ -149,9 +145,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions justifyContent Function snapshot test should match 1`
-] = `
+exports[`mixin Functions justifyContent Function snapshot test should match 1`] = `
 Array [
   "
   -ms-flex-pack: ",
@@ -173,9 +167,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions linearGradient Function snapshot test should match 1`
-] = `
+exports[`mixin Functions linearGradient Function snapshot test should match 1`] = `
 Array [
   "
     background: nth(nth(",
@@ -195,9 +187,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions linearGradient Function snapshot test should match 2`
-] = `
+exports[`mixin Functions linearGradient Function snapshot test should match 2`] = `
 Array [
   "
     background: nth(nth(",
@@ -298,9 +288,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions transformOrigin Function snapshot test should match 1`
-] = `
+exports[`mixin Functions transformOrigin Function snapshot test should match 1`] = `
 Array [
   "
   transform-origin: ",
@@ -322,9 +310,7 @@ Array [
 ]
 `
 
-exports[
-  `mixin Functions transformStyle Function snapshot test should match 1`
-] = `
+exports[`mixin Functions transformStyle Function snapshot test should match 1`] = `
 Array [
   "
   transform-style: ",

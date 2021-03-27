@@ -3,11 +3,7 @@ const flatten = (array: any[]): any[] => {
     return []
   }
 
-  return array.reduce(
-    (result, value) =>
-      result.concat(Array.isArray(value) ? flatten(value) : value),
-    []
-  )
+  return array.reduce((result, value) => result.concat(Array.isArray(value) ? flatten(value) : value), [])
 }
 
 export default flatten

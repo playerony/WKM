@@ -50,20 +50,14 @@ export const useDeviceDetect = (): DeviceDetectData => {
         isSmallScreen: false,
         isMediumScreen: false
       })
-    } else if (
-      windowSize.width >= variables.breakpoint.mobileScreen &&
-      windowSize.width <= variables.breakpoint.smallScreen
-    ) {
+    } else if (windowSize.width >= variables.breakpoint.mobileScreen && windowSize.width <= variables.breakpoint.smallScreen) {
       setDeviceData({
         isSmallScreen: true,
         isLargeScreen: false,
         isMediumScreen: false,
         isMobileScreen: false
       })
-    } else if (
-      windowSize.width >= variables.breakpoint.smallScreen &&
-      windowSize.width <= variables.breakpoint.mediumScreen
-    ) {
+    } else if (windowSize.width >= variables.breakpoint.smallScreen && windowSize.width <= variables.breakpoint.mediumScreen) {
       setDeviceData({
         isSmallScreen: false,
         isLargeScreen: false,
