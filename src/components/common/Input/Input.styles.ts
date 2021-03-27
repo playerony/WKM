@@ -33,9 +33,11 @@ export const StyledInput = styled(Input)<StyledInputProps>`
 
     ${transition('all 300ms')}
 
-    ${({ isInputFocus }) => isInputFocus && css`
-      border-bottom-color: ${({ theme }) => theme.color.blue};
-    `}
+    ${({ isInputFocus }) =>
+      isInputFocus &&
+      css`
+        border-bottom-color: ${({ theme }) => theme.color.blue};
+      `}
   }
 `
 
@@ -56,10 +58,12 @@ export const StyledLabel = styled(Title)<StyledLabelProps>`
 
     ${transition('all 300ms')}
 
-    ${({ isInputFocus }) => isInputFocus && css`
-      top: -15px;
-      font-size: 16px;
-      color: ${({ theme }) => theme.color.gray};
-    `}
+    ${({ isInputFocus }) =>
+      isInputFocus &&
+      css`
+        top: -15px;
+        font-size: 16px;
+        color: ${({ theme }) => theme.color.gray};
+      `}
   }
 `

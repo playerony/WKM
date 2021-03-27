@@ -36,9 +36,11 @@ export const StyledTextArea = styled(TextArea)<StyledTextAreaProps>`
 
     ${transition('all 300ms')}
 
-    ${({ isTextAreaFocus }) => isTextAreaFocus && css`
-      border-bottom-color: ${({ theme }) => theme.color.blue};
-    `}
+    ${({ isTextAreaFocus }) =>
+      isTextAreaFocus &&
+      css`
+        border-bottom-color: ${({ theme }) => theme.color.blue};
+      `}
   }
 `
 
@@ -59,10 +61,12 @@ export const StyledLabel = styled(Title)<StyledLabelProps>`
 
     ${transition('all 300ms')}
 
-    ${({ isTextAreaFocus }) => isTextAreaFocus && css`
-      top: -15px;
-      font-size: 16px;
-      color: ${({ theme }) => theme.color.gray};
-    `}
+    ${({ isTextAreaFocus }) =>
+      isTextAreaFocus &&
+      css`
+        top: -15px;
+        font-size: 16px;
+        color: ${({ theme }) => theme.color.gray};
+      `}
   }
 `

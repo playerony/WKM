@@ -22,13 +22,10 @@ const TextArea = ({ label, onBlur, onFocus, ...restProps }: TextAreaProps): JSX.
 
   return (
     <StyledWrapper>
-      <StyledTextArea
-        onBlur={handleBlur}
-        onFocus={handleFocus}
-        isTextAreaFocus={isFocusOrValue}
-        {...restProps}
-      />
-      <StyledLabel level={4} isTextAreaFocus={isFocusOrValue}>{label}</StyledLabel>
+      <StyledTextArea onBlur={handleBlur} onFocus={handleFocus} isTextAreaFocus={isFocusOrValue} {...restProps} />
+      <StyledLabel level={4} isTextAreaFocus={isFocusOrValue}>
+        {label}
+      </StyledLabel>
     </StyledWrapper>
   )
 }

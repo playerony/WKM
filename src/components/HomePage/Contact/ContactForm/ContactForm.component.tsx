@@ -20,7 +20,7 @@ const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element
   const [form] = Form.useForm()
 
   return (
-    <Form {...formProps} form={form} autoComplete="off" >
+    <Form {...formProps} form={form} autoComplete="off">
       <Form.Item
         name="firstname"
         validateFirst={true}
@@ -83,13 +83,7 @@ const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element
       >
         <Input name="email" label="Email*" spellCheck="false" autoComplete="none" autoCorrect="off" />
       </Form.Item>
-      <Input
-        name="email"
-        autoCorrect="off"
-        spellCheck="false"
-        autoComplete="off"
-        wrapperStyles={{ display: 'none' }}
-      />
+      <Input name="email" autoCorrect="off" spellCheck="false" autoComplete="off" wrapperStyles={{ display: 'none' }} />
       <Form.Item
         name="message"
         validateFirst={true}

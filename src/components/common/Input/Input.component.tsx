@@ -22,13 +22,12 @@ const Input = ({ label, onBlur, onFocus, wrapperStyles, ...restProps }: InputPro
 
   return (
     <StyledWrapper style={wrapperStyles}>
-      <StyledInput
-        onBlur={handleBlur}
-        onFocus={handleFocus}
-        isInputFocus={isFocusOrValue}
-        {...restProps}
-      />
-      {label && <StyledLabel level={4} isInputFocus={isFocus || !!restProps.value}>{label}</StyledLabel>}
+      <StyledInput onBlur={handleBlur} onFocus={handleFocus} isInputFocus={isFocusOrValue} {...restProps} />
+      {label && (
+        <StyledLabel level={4} isInputFocus={isFocus || !!restProps.value}>
+          {label}
+        </StyledLabel>
+      )}
     </StyledWrapper>
   )
 }
