@@ -2,9 +2,7 @@ import { css, FlattenSimpleInterpolation } from 'styled-components'
 
 import variables, { Breakpoint } from './variables'
 
-export const transition = (
-  transitions: string
-): FlattenSimpleInterpolation => css`
+export const transition = (transitions: string): FlattenSimpleInterpolation => css`
   transition: ${transitions};
   -o-transition: ${transitions};
   -ms-transition: ${transitions};
@@ -12,25 +10,17 @@ export const transition = (
   -webkit-transition: ${transitions};
 `
 
-export const linearGradient = (
-  direction: string,
-  ...colorStops: string[]
-): FlattenSimpleInterpolation => {
+export const linearGradient = (direction: string, ...colorStops: string[]): FlattenSimpleInterpolation => {
   const formattedColorSteps = colorStops.join(', ')
 
   return css`
     background: nth(nth(${formattedColorSteps}, 1), 1);
     background: linear-gradient(${direction}, ${formattedColorSteps});
-    background: -webkit-linear-gradient(
-      legacy-direction(${direction}),
-      ${formattedColorSteps}
-    );
+    background: -webkit-linear-gradient(legacy-direction(${direction}), ${formattedColorSteps});
   `
 }
 
-export const transform = (
-  transforms: string
-): FlattenSimpleInterpolation => css`
+export const transform = (transforms: string): FlattenSimpleInterpolation => css`
   transform: ${transforms};
   -o-transform: ${transforms};
   -ms-transform: ${transforms};
@@ -38,9 +28,7 @@ export const transform = (
   -webkit-transform: ${transforms};
 `
 
-export const transformStyle = (
-  style: string
-): FlattenSimpleInterpolation => css`
+export const transformStyle = (style: string): FlattenSimpleInterpolation => css`
   transform-style: ${style};
   -o-transform-style: ${style};
   -ms-transform-style: ${style};
@@ -48,9 +36,7 @@ export const transformStyle = (
   -webkit-transform-style: ${style};
 `
 
-export const transformOrigin = (
-  origin: string
-): FlattenSimpleInterpolation => css`
+export const transformOrigin = (origin: string): FlattenSimpleInterpolation => css`
   transform-origin: ${origin};
   -o-transform-origin: ${origin};
   -ms-transform-origin: ${origin};
@@ -80,9 +66,7 @@ export const flexbox = (): FlattenSimpleInterpolation => css`
   display: -webkit-flex;
 `
 
-export const justifyContent = (
-  justify: string
-): FlattenSimpleInterpolation => css`
+export const justifyContent = (justify: string): FlattenSimpleInterpolation => css`
   -ms-flex-pack: ${justify};
   justify-content: ${justify};
   -ms-justify-content: ${justify};
@@ -98,9 +82,7 @@ export const alignItems = (align: string): FlattenSimpleInterpolation => css`
   -webkit-align-items: ${align};
 `
 
-export const flexDirection = (
-  direction: string
-): FlattenSimpleInterpolation => css`
+export const flexDirection = (direction: string): FlattenSimpleInterpolation => css`
   flex-direction: ${direction};
   -ms-flex-direction: ${direction};
   -moz-flex-direction: ${direction};
@@ -127,20 +109,12 @@ export const appearance = (value: string): FlattenSimpleInterpolation => css`
   -webkit-appearance: ${value};
 `
 
-export const respondTo = (Object.keys(
-  variables.breakpoint
-) as (keyof Breakpoint)[]).reduce<
+export const respondTo = (Object.keys(variables.breakpoint) as (keyof Breakpoint)[]).reduce<
   {
-    [key in keyof Breakpoint]: (
-      style: TemplateStringsArray,
-      ...args: Array<any>
-    ) => FlattenSimpleInterpolation
+    [key in keyof Breakpoint]: (style: TemplateStringsArray, ...args: Array<any>) => FlattenSimpleInterpolation
   }
 >((accumulator, breakpoint) => {
-  accumulator[breakpoint] = (
-    style: TemplateStringsArray,
-    ...args: Array<any>
-  ): FlattenSimpleInterpolation => css`
+  accumulator[breakpoint] = (style: TemplateStringsArray, ...args: Array<any>): FlattenSimpleInterpolation => css`
     @media (max-width: ${variables.breakpoint[breakpoint]}px) {
       ${css(style, ...args)};
     }

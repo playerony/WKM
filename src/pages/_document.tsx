@@ -1,12 +1,6 @@
 import React from 'react'
 import { ServerStyleSheet } from 'styled-components'
-import Document, {
-  DocumentContext,
-  Head,
-  Html,
-  Main,
-  NextScript
-} from 'next/document'
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,8 +10,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />)
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
         })
 
       const initialProps = await Document.getInitialProps(ctx)
@@ -41,6 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="description" content="WKM" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />

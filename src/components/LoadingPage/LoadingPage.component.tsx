@@ -1,10 +1,6 @@
 import React from 'react'
 
-import {
-  StyledWrapper,
-  StyledLoader,
-  StyledLoaderFragment
-} from './LoadingPage.styles'
+import { StyledWrapper, StyledLoader, StyledLoaderFragment } from './LoadingPage.styles'
 import { LoadingPageProps } from './LoadingPage.types'
 
 const LoadingPage = ({ isLoading }: LoadingPageProps): JSX.Element => (

@@ -7,10 +7,6 @@ interface ThemeProviderMockProps {
   children: ReactNode
 }
 
-const ThemeProviderMock = ({
-  children
-}: ThemeProviderMockProps): JSX.Element => (
-  <ThemeProvider theme={variables}>{children}</ThemeProvider>
-)
+const ThemeProviderMock = ({ children }: ThemeProviderMockProps): JSX.Element => <ThemeProvider theme={variables}>{children}</ThemeProvider>
 
 export default ThemeProviderMock

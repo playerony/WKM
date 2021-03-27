@@ -120,10 +120,7 @@ const largeScreenGalleryElements = [
 const Gallery = (): JSX.Element => {
   const { isMobileScreen, isSmallScreen } = useDeviceDetect()
 
-  const galleryElements =
-    isMobileScreen || isSmallScreen
-      ? mobileScreenGalleryElements
-      : largeScreenGalleryElements
+  const galleryElements = isMobileScreen || isSmallScreen ? mobileScreenGalleryElements : largeScreenGalleryElements
 
   return (
     <StyledWrapper>

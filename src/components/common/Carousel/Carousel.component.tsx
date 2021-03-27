@@ -1,18 +1,10 @@
 import React from 'react'
 import AntdCarousel from 'antd/lib/carousel'
 
-import {
-  StyledWrapper,
-  StyledLeftArrow,
-  StyledRightArrow
-} from './Carousel.styles'
+import { StyledWrapper, StyledLeftArrow, StyledRightArrow } from './Carousel.styles'
 import { CarouselProps } from './Carousel.types'
 
-const Carousel = ({
-  setPage,
-  children,
-  carouselRef
-}: CarouselProps): JSX.Element => {
+const Carousel = ({ setPage, children, carouselRef }: CarouselProps): JSX.Element => {
   const nextSlide = (): void => carouselRef.current.next()
 
   const prevSlide = (): void => carouselRef.current.prev()

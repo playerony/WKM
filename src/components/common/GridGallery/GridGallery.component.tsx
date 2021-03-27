@@ -2,11 +2,7 @@ import React, { useState } from 'react'
 
 import ImageModal from '../ImageModal/ImageModal.component'
 
-import {
-  StyledWrapper,
-  StyledGalleryImage,
-  StyledGalleryElement
-} from './GridGallery.styles'
+import { StyledWrapper, StyledGalleryImage, StyledGalleryElement } from './GridGallery.styles'
 import { GridGalleryProps } from './GridGallery.types'
 
 const GridGallery = ({ gap = 15, elements }: GridGalleryProps): JSX.Element => {
@@ -22,18 +18,11 @@ const GridGallery = ({ gap = 15, elements }: GridGalleryProps): JSX.Element => {
 
   return (
     <>
-      <ImageModal
-        src={selectedImage}
-        onCancel={onModalCancel}
-        visible={isImageModalVisible}
-      />
+      <ImageModal src={selectedImage} onCancel={onModalCancel} visible={isImageModalVisible} />
       <StyledWrapper gap={gap}>
         {React.Children.toArray(
           elements.map(({ src, ...restProps }) => (
-            <StyledGalleryElement
-              onClick={onGalleryElementClick(src)}
-              {...restProps}
-            >
+            <StyledGalleryElement onClick={onGalleryElementClick(src)} {...restProps}>
               <StyledGalleryImage src={src} />
             </StyledGalleryElement>
           ))
