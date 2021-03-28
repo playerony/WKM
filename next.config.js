@@ -13,18 +13,6 @@ module.exports = withImages(
       ...withSass({
         lessLoaderOptions: {
           javascriptEnabled: true
-        },
-        webpack: (config, options) => {
-          // config.module.rules.push({
-          //   test: /\.docx$/,
-          //   use: [
-          //     {
-          //       loader: 'docx-loader',
-          //     }
-          //   ]
-          // })
-
-          return config
         }
       })
     })
