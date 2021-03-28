@@ -7,13 +7,7 @@ import { StyledVideo, StyledButton, StyledWrapper, StyledVideoMask } from './Wel
 
 const Welcome = ({ onVideoLoad, onButtonClick }: WelcomeProps): JSX.Element => (
   <StyledWrapper>
-    <StyledVideo
-      loop={true}
-      muted={true}
-      autoPlay={true}
-      onPlay={onVideoLoad}
-      src="/static/video/home_page_video.mp4"
-    />
+    <StyledVideo loop={true} muted={true} autoPlay={true} onPlay={onVideoLoad} src="/static/video/home_page_video.mp4" />
     <StyledVideoMask />
     <Logo />
     <StyledButton onClick={onButtonClick}>Czym jest WKM</StyledButton>
