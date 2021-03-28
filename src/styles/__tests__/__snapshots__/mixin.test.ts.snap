@@ -20,7 +20,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions animation Function snapshot test should match 1`] = `
 Array [
@@ -42,7 +42,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions appearance Function snapshot test should match 1`] = `
 Array [
@@ -61,7 +61,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions borderRadius Function snapshot test should match 1`] = `
 Array [
@@ -77,7 +77,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions boxShadow Function snapshot test should match 1`] = `
 Array [
@@ -93,7 +93,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions flexDirection Function snapshot test should match 1`] = `
 Array [
@@ -112,7 +112,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions flexWrap Function snapshot test should match 1`] = `
 Array [
@@ -131,7 +131,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions flexbox Function snapshot test should match 1`] = `
 Array [
@@ -143,7 +143,7 @@ Array [
   display: -webkit-flex;
 ",
 ]
-`;
+`
 
 exports[`mixin Functions justifyContent Function snapshot test should match 1`] = `
 Array [
@@ -165,7 +165,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions linearGradient Function snapshot test should match 1`] = `
 Array [
@@ -182,7 +182,7 @@ Array [
   ");
   ",
 ]
-`;
+`
 
 exports[`mixin Functions linearGradient Function snapshot test should match 2`] = `
 Array [
@@ -202,7 +202,7 @@ Array [
   ");
   ",
 ]
-`;
+`
 
 exports[`mixin Functions respondTo Function snapshot test should match 1`] = `
 Array [
@@ -216,7 +216,7 @@ Array [
     }
   ",
 ]
-`;
+`
 
 exports[`mixin Functions respondTo Function snapshot test should match 2`] = `
 Array [
@@ -230,7 +230,7 @@ Array [
     }
   ",
 ]
-`;
+`
 
 exports[`mixin Functions respondTo Function snapshot test should match 3`] = `
 Array [
@@ -244,7 +244,7 @@ Array [
     }
   ",
 ]
-`;
+`
 
 exports[`mixin Functions respondTo Function snapshot test should match 4`] = `
 Array [
@@ -258,7 +258,7 @@ Array [
     }
   ",
 ]
-`;
+`
 
 exports[`mixin Functions transform Function snapshot test should match 1`] = `
 Array [
@@ -280,7 +280,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions transformOrigin Function snapshot test should match 1`] = `
 Array [
@@ -302,7 +302,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions transformStyle Function snapshot test should match 1`] = `
 Array [
@@ -324,7 +324,7 @@ Array [
   ";
 ",
 ]
-`;
+`
 
 exports[`mixin Functions transition Function snapshot test should match 1`] = `
 Array [
@@ -346,4 +346,4 @@ Array [
   ";
 ",
 ]
-`;
+`
