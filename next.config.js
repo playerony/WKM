@@ -8,20 +8,25 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = withImages(
-  withVideos({
-    trailingSlash: true,
-    inlineImageLimit: 0,
-    exportPathMap: function () {
-      return {
-        '/': { page: '/' }
-      }
-    },
-    ...withLess({
+  withVideos(
+    withLess({
       ...withSass({
         lessLoaderOptions: {
           javascriptEnabled: true
+        },
+        webpack: (config, options) => {
+          // config.module.rules.push({
+          //   test: /\.docx$/,
+          //   use: [
+          //     {
+          //       loader: 'docx-loader',
+          //     }
+          //   ]
+          // })
+
+          return config
         }
       })
     })
-  })
+  )
 )

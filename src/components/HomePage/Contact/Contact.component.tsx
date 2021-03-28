@@ -12,16 +12,13 @@ import {
   StyledDownloadSectionWrapper
 } from './Contact.styles'
 
-import backgroundVideo from '@public/video/contact_page_video.mp4'
-
 const Contact = (): JSX.Element => (
   <StyledWrapper>
-    <StyledVideo loop={true} muted={true} autoPlay={true} src={backgroundVideo} />
+    <StyledVideo loop={true} muted={true} autoPlay={true} src="/static/video/contact_page_video.mp4" />
     <StyledVideoMask />
     <StyledContentWrapper>
       <StyledDownloadSectionWrapper>
-        <Attachment>Załącznik_1.doc</Attachment>
-        <Attachment>Załącznik_2.doc</Attachment>
+        <Attachment toDownload="/static/download/attachment1.docx">deklaracja.docx</Attachment>
       </StyledDownloadSectionWrapper>
       <StyledContactSectionWrapper>
         <ContactForm isLoading={true} />
