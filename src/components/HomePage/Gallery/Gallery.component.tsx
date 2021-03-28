@@ -4,33 +4,19 @@ import RombGallery from '@components/common/RombGallery/RombGallery.component'
 
 import { StyledVideo, StyledWrapper, StyledVideoMask } from './Gallery.styles'
 
-import galleryImage1 from '@public/gallery/gallery_1.jpg'
-import galleryImage2 from '@public/gallery/gallery_2.jpg'
-import galleryImage3 from '@public/gallery/gallery_3.jpg'
-import galleryImage4 from '@public/gallery/gallery_4.jpg'
-import galleryImage5 from '@public/gallery/gallery_5.jpg'
-import galleryImage7 from '@public/gallery/gallery_7.jpg'
-import galleryImage9 from '@public/gallery/gallery_9.jpg'
-import galleryImage11 from '@public/gallery/gallery_11.jpg'
-import galleryImage12 from '@public/gallery/gallery_12.jpg'
-import galleryImage14 from '@public/gallery/gallery_14.jpg'
-import galleryImage15 from '@public/gallery/gallery_15.jpg'
-import galleryImage18 from '@public/gallery/gallery_18.jpg'
-import backgroundVideo from '@public/video/gallery_page_video.mp4'
-
 const galleryImages: string[] = [
-  galleryImage1,
-  galleryImage9,
-  galleryImage3,
-  galleryImage7,
-  galleryImage5,
-  galleryImage4,
-  galleryImage2,
-  galleryImage18,
-  galleryImage11,
-  galleryImage12,
-  galleryImage14,
-  galleryImage15
+  '/static/gallery/gallery_1.jpg',
+  '/static/gallery/gallery_9.jpg',
+  '/static/gallery/gallery_3.jpg',
+  '/static/gallery/gallery_7.jpg',
+  '/static/gallery/gallery_5.jpg',
+  '/static/gallery/gallery_4.jpg',
+  '/static/gallery/gallery_2.jpg',
+  '/static/gallery/gallery_18.jpg',
+  '/static/gallery/gallery_11.jpg',
+  '/static/gallery/gallery_12.jpg',
+  '/static/gallery/gallery_14.jpg',
+  '/static/gallery/gallery_15.jpg'
 ]
 
 const Gallery = (): JSX.Element => {
@@ -59,7 +45,7 @@ const Gallery = (): JSX.Element => {
 
   return (
     <StyledWrapper ref={galleryRef as any} style={{ height: `calc(100vh - ${imageHeight / 2}px)` }}>
-      <StyledVideo loop={true} muted={true} autoPlay={true} src={backgroundVideo} />
+      <StyledVideo loop={true} muted={true} autoPlay={true} src="/static/video/gallery_page_video.mp4" />
       <StyledVideoMask />
       <RombGallery images={galleryImages} />
     </StyledWrapper>

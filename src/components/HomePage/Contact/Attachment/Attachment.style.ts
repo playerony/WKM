@@ -31,7 +31,7 @@ export const StyledLabel = styled(Title)`
   }
 `
 
-export const StyledWrapper = styled.div`
+export const StyledWrapper = styled.a`
   cursor: pointer;
   position: relative;
 
