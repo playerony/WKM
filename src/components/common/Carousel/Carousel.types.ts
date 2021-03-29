@@ -1,8 +1,9 @@
 import { ReactNode } from 'react'
+import { CarouselProps as AntdCarouselProps } from 'antd/lib/carousel'
 
-export interface CarouselProps {
-  carouselRef: any
-  children: ReactNode[]
+export interface CarouselProps extends AntdCarouselProps {
+  carouselRef?: any
+  children: ReactNode[] | ReactNode
 
-  setPage: (page: number) => void
+  setPage?: (page: number) => void
 }

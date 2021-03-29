@@ -4,8 +4,10 @@ import Contact from '@components/HomePage/Contact/Contact.component'
 import Gallery from '@components/HomePage/Gallery/Gallery.component'
 import Welcome from '@components/HomePage/Welcome/Welcome.component'
 import Carousel from '@components/common/Carousel/Carousel.component'
-import LoadingPage from '@components/LoadingPage/LoadingPage.component'
+import InstructionPage from '@components/InstructionPage/InstructionPage.component'
 import HistorySlide from '@components/HomePage/HistorySlide/HistorySlide.component'
+
+import useTimeout from '@hooks/useTimeout'
 
 const slides = [
   {
@@ -27,24 +29,50 @@ const slides = [
 
 const HomePage = (): JSX.Element => {
   const carouselRef: any = useRef()
+  const wrapperCarouselRef: any = useRef()
 
   const [_, setPage] = useState<number>(0)
-  const [videoLoaded, setVideoLoaded] = useState<boolean>(false)
+  const [instructionVisibility, setInstructionVisibility] = useState<boolean>(true)
 
-  const onVideoLoad = (): void => setVideoLoaded(true)
+  useTimeout(() => {
+    wrapperCarouselRef.current && wrapperCarouselRef.current.goTo(1)
+
+    setTimeout(() => {
+      setInstructionVisibility(false)
+    }, 500)
+  }, 5000)
 
   const onButtonClick = (): void => carouselRef.current.goTo(1)
 
-  return (
-    <>
-      <Carousel setPage={setPage} carouselRef={carouselRef}>
-        <Welcome onVideoLoad={onVideoLoad} onButtonClick={onButtonClick} />
-        {React.Children.toArray(slides.map((slide) => <HistorySlide {...slide} />))}
-        <Gallery />
-        <Contact />
+  const onSwipe = () => {
+    if (instructionVisibility) {
+      setTimeout(() => {
+        setInstructionVisibility(false)
+      }, 500)
+    }
+  }
+
+  if (instructionVisibility) {
+    return (
+      <Carousel onSwipe={onSwipe} dots={false} carouselRef={wrapperCarouselRef} lazyLoad="ondemand">
+        <InstructionPage />
+        <Carousel>
+          <Welcome onButtonClick={onButtonClick} />
+          {React.Children.toArray(slides.map((slide) => <HistorySlide {...slide} />))}
+          <Gallery />
+          <Contact />
+        </Carousel>
       </Carousel>
-      <LoadingPage isLoading={!videoLoaded} />
-    </>
+    )
+  }
+
+  return (
+    <Carousel key="main-carousel" setPage={setPage} carouselRef={carouselRef} lazyLoad="ondemand">
+      <Welcome onButtonClick={onButtonClick} />
+      {React.Children.toArray(slides.map((slide) => <HistorySlide {...slide} />))}
+      <Gallery />
+      <Contact />
+    </Carousel>
   )
 }
 
