@@ -6,8 +6,7 @@ exports[`GlobalStyles Component snapshot test should match 1`] = `
     data-styled="active"
     data-styled-version="5.2.1"
   >
-    html,body{color:#AAAAAA;font-family:'Montserrat',sans-serif;background-color:#16161a;}
-    input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 30px #AAABBB inset !important;}
+    html,body{cursor:url(static/images/drag.png),auto;color:#AAAAAA;font-family:'Montserrat',sans-serif;background-color:#16161a;}
   </style>
 </head>
-`
+`;
