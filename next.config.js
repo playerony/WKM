@@ -13,6 +13,12 @@ module.exports = withImages(
       ...withSass({
         lessLoaderOptions: {
           javascriptEnabled: true
+        },
+        trailingSlash: true,
+        exportPathMap: function() {
+          return {
+            '/': { page: '/' }
+          };
         }
       })
     })
