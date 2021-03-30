@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import Input from 'antd/lib/input'
 import Typography from 'antd/lib/typography'
 
-import { transition } from '@styles/mixin'
+import { transition, respondTo } from '@styles/mixin'
 
 const { Title } = Typography
 
@@ -24,7 +24,7 @@ export const StyledInput = styled(Input)<StyledInputProps>`
     outline: none;
     border-radius: 0;
     box-shadow: none;
-    transition: 0.4s all ease;
+    transition: 0.3s all;
     background-color: transparent;
     color: ${({ theme }) => theme.color.cream};
     font-family: ${({ theme }) => theme.font.normal};
@@ -38,6 +38,10 @@ export const StyledInput = styled(Input)<StyledInputProps>`
       css`
         border-bottom-color: ${({ theme }) => theme.color.blue};
       `}
+
+    ${({ theme }) => respondTo.mobileScreen`
+      padding: ${theme.padding.small / 2}px 0;
+    `}
   }
 `
 
@@ -58,12 +62,20 @@ export const StyledLabel = styled(Title)<StyledLabelProps>`
 
     ${transition('all 300ms')}
 
+    ${respondTo.mobileScreen`
+      font-size: 16px;
+    `}
+
     ${({ isInputFocus }) =>
       isInputFocus &&
       css`
         top: -15px;
         font-size: 16px;
         color: ${({ theme }) => theme.color.gray};
+
+        ${respondTo.mobileScreen`
+          font-size: 12px;
+        `}
       `}
   }
 `

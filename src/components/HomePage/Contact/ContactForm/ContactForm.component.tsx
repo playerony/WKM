@@ -16,15 +16,16 @@ const baseFieldValidators = [
   () => regExpValidator(/^.*\s{2,}.*$/, 'Nazwa zawiera 2 spacje pod rząd')
 ]
 
-const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element => {
+const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps): JSX.Element => {
   const [form] = Form.useForm()
 
+  const onFinish = (values: any): void => handleFinish(values, () => form.resetFields())
+
   return (
-    <Form {...formProps} form={form} autoComplete="off">
+    <Form {...formProps} form={form} onFinish={onFinish} autoComplete="off" style={{ width: '100%' }}>
       <Form.Item
         name="firstname"
         validateFirst={true}
-        validateTrigger="onBlur"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -44,7 +45,6 @@ const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element
       <Form.Item
         name="lastname"
         validateFirst={true}
-        validateTrigger="onBlur"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -64,7 +64,6 @@ const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element
       <Form.Item
         name="email"
         validateFirst={true}
-        validateTrigger="onBlur"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -87,7 +86,6 @@ const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element
       <Form.Item
         name="message"
         validateFirst={true}
-        validateTrigger="onBlur"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -108,10 +106,19 @@ const ContactForm = ({ isLoading, ...formProps }: ContactFormProps): JSX.Element
       >
         <TextArea name="message" label="Wiadomość*" spellCheck="false" autoComplete="off" autoCorrect="off" />
       </Form.Item>
-      <Form.Item labelCol={{ span: 24, style: { padding: 0, height: 28 } }}>
-        <Button size="large" type="ghost" htmlType="submit" style={{ marginTop: 20 }}>
-          Wyślij
-        </Button>
+      <Form.Item shouldUpdate={true} labelCol={{ span: 24, style: { padding: 0, height: 28 } }}>
+        {() => (
+          <Button
+            size="large"
+            type="ghost"
+            htmlType="submit"
+            loading={isLoading}
+            disabled={!form.isFieldsTouched(true) || form.getFieldsError().filter(({ errors }) => errors.length).length > 0}
+            style={{ marginTop: 20 }}
+          >
+            Wyślij
+          </Button>
+        )}
       </Form.Item>
     </Form>
   )

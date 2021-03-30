@@ -1,5 +1,4 @@
 out
-.env
 .next
 *.md
 *.sh
@@ -10,6 +9,7 @@ public
 .DS_Store
 .eslintrc
 .env.dist
+.env.local
 .gitignore
 .prettierrc
 .eslintignore
