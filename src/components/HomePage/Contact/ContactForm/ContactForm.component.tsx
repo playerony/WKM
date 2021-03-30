@@ -107,22 +107,18 @@ const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps
         <TextArea name="message" label="Wiadomość*" spellCheck="false" autoComplete="off" autoCorrect="off" />
       </Form.Item>
       <Form.Item shouldUpdate={true} labelCol={{ span: 24, style: { padding: 0, height: 28 } }}>
-        {() =>
+        {() => (
           <Button
             size="large"
             type="ghost"
             htmlType="submit"
             loading={isLoading}
-            disabled={
-              !form.isFieldsTouched(true) ||
-              form.getFieldsError().filter(({ errors }) => errors.length)
-                .length > 0
-            }
+            disabled={!form.isFieldsTouched(true) || form.getFieldsError().filter(({ errors }) => errors.length).length > 0}
             style={{ marginTop: 20 }}
           >
             Wyślij
-        </Button>
-        }
+          </Button>
+        )}
       </Form.Item>
     </Form>
   )
