@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { flexbox, alignItems, flexDirection, justifyContent } from '@styles/mixin'
+import { flexbox, alignItems, respondTo, flexDirection, justifyContent } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
   width: 100%;
@@ -34,6 +34,10 @@ export const StyledContentWrapper = styled.div`
   position: absolute;
 
   ${flexbox()}
+
+  ${respondTo.mobileScreen`
+    ${flexDirection('column')}
+  `}
 `
 
 export const StyledDownloadSectionWrapper = styled.section`
@@ -45,10 +49,40 @@ export const StyledDownloadSectionWrapper = styled.section`
   ${alignItems('center')}
   ${flexDirection('column')}
   ${justifyContent('space-around')}
+
+  ${({ theme }) => respondTo.mediumScreen`
+    padding: ${theme.padding.big}px;
+  `}
+
+  ${({ theme }) => respondTo.smallScreen`
+    padding: ${theme.padding.medium}px;
+  `}
+
+  ${({ theme }) => respondTo.mobileScreen`
+    padding: ${theme.padding.small}px;
+    padding-bottom: 0;
+    max-height: 150px;
+  `}
 `
 
 export const StyledContactSectionWrapper = styled.section`
   flex: 1;
   z-index: 20;
   padding: ${({ theme }) => theme.padding.big * 2}px;
+
+  ${flexbox()}
+  ${alignItems('center')}
+
+  ${({ theme }) => respondTo.mediumScreen`
+    padding: ${theme.padding.big}px;
+  `}
+
+  ${({ theme }) => respondTo.smallScreen`
+    padding: ${theme.padding.medium}px;
+  `}
+
+  ${({ theme }) => respondTo.mobileScreen`
+    padding: ${theme.padding.small}px;
+    padding-top: 0;
+  `}
 `

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import Input from 'antd/lib/input'
 import Typography from 'antd/lib/typography'
 
-import { transition } from '@styles/mixin'
+import { transition, respondTo } from '@styles/mixin'
 
 const { TextArea } = Input
 const { Title } = Typography
@@ -41,6 +41,11 @@ export const StyledTextArea = styled(TextArea)<StyledTextAreaProps>`
       css`
         border-bottom-color: ${({ theme }) => theme.color.blue};
       `}
+
+    ${({ theme }) => respondTo.mobileScreen`
+      height: 100px;
+      padding: ${theme.padding.small / 2}px 0;
+    `}
   }
 `
 
@@ -61,12 +66,20 @@ export const StyledLabel = styled(Title)<StyledLabelProps>`
 
     ${transition('all 300ms')}
 
+    ${respondTo.mobileScreen`
+      font-size: 18px;
+    `}
+
     ${({ isTextAreaFocus }) =>
       isTextAreaFocus &&
       css`
         top: -15px;
         font-size: 16px;
         color: ${({ theme }) => theme.color.gray};
+
+        ${respondTo.mobileScreen`
+          font-size: 14px;
+        `}
       `}
   }
 `
