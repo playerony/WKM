@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "test": "jest",
-    "start": "next start",
+    "start": "node server.js",
     "test:watch": "jest --watch",
     "build": "next build && next export",
     "format": "prettier --write \"**/*\"",
@@ -47,6 +47,8 @@
     "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.3",
     "buffer": "^6.0.3",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "less": "^4.1.1",
     "next": "^10.0.8",
