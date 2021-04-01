@@ -1,17 +1,7 @@
-import {
-  flexbox,
-  flexWrap,
-  transform,
-  respondTo,
-  appearance,
-  transition,
-  alignItems,
-  flexDirection,
-  justifyContent
-} from '../mixin'
-
 import snapshotTest from '@utilities/tests/snapshotTest'
 import functionImportTest from '@utilities/tests/functionImportTest'
+
+import { flexbox, flexWrap, transform, respondTo, appearance, transition, alignItems, flexDirection, justifyContent } from '../mixin'
 
 describe('mixin Functions', () => {
   describe('transition Function', () => {
