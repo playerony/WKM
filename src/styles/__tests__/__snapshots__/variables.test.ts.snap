@@ -10,14 +10,10 @@ Object {
     "smallScreen": 1023,
   },
   "color": Object {
-    "black": "#16161a",
+    "black": "#000000",
     "blue": "#1890ff",
     "cream": "#FBF7F3",
     "gray": "#AAAAAA",
-    "orange": "#E4572E",
-    "purple": "#6B5B95",
-    "red": "#E81F25",
-    "white": "#FFFFFF",
   },
   "font": Object {
     "bold": "'HelveticaNeueBold', Helvetica, Arial, sans-serif",
@@ -29,4 +25,4 @@ Object {
     "small": 20,
   },
 }
-`
+`;

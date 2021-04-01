@@ -6,6 +6,7 @@ export const StyledWrapper = styled.div`
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  object-fit: cover;
   position: relative;
 
   ${flexbox()}

@@ -32,6 +32,9 @@ export const StyledButton = styled(Button)`
     }
 
     ${({ theme }) => respondTo.mobileScreen`
+      float: unset;
+      display: block;
+      margin: 0 auto;
       padding: ${`${theme.padding.small / 2}px ${theme.padding.medium}px`};
     `}
   }

@@ -58,10 +58,8 @@ export const StyledDownloadSectionWrapper = styled.section`
     padding: ${theme.padding.medium}px;
   `}
 
-  ${({ theme }) => respondTo.mobileScreen`
-    padding: ${theme.padding.small}px;
-    padding-bottom: 0;
-    max-height: 150px;
+  ${respondTo.mobileScreen`
+    display: none;
   `}
 `
 
