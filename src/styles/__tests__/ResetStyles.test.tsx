@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer'
 
 import ResetStyles from '../ResetStyles'
 
-import snapshotTest from '@tests/snapshotTest'
-import ThemeProviderMock from '@tests/ThemeProviderMock'
+import snapshotTest from '@utilities/tests/snapshotTest'
+import ThemeProviderMock from '@utilities/tests/ThemeProviderMock'
 
 describe('GlobalStyles Component', () => {
   renderer.create(

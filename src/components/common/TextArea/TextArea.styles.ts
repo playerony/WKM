@@ -43,7 +43,7 @@ export const StyledTextArea = styled(TextArea)<StyledTextAreaProps>`
       `}
 
     ${({ theme }) => respondTo.mobileScreen`
-      height: 100px;
+      height: 150px;
       padding: ${theme.padding.small / 2}px 0;
     `}
   }
@@ -67,7 +67,7 @@ export const StyledLabel = styled(Title)<StyledLabelProps>`
     ${transition('all 300ms')}
 
     ${respondTo.mobileScreen`
-      font-size: 18px;
+      font-size: 16px;
     `}
 
     ${({ isTextAreaFocus }) =>
@@ -78,7 +78,7 @@ export const StyledLabel = styled(Title)<StyledLabelProps>`
         color: ${({ theme }) => theme.color.gray};
 
         ${respondTo.mobileScreen`
-          font-size: 14px;
+          font-size: 12px;
         `}
       `}
   }

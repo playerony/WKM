@@ -15,10 +15,10 @@ module.exports = withImages(
           javascriptEnabled: true
         },
         trailingSlash: true,
-        exportPathMap: function() {
+        exportPathMap: function () {
           return {
             '/': { page: '/' }
-          };
+          }
         }
       })
     })

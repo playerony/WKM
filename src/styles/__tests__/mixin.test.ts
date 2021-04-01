@@ -1,59 +1,27 @@
 import {
   flexbox,
   flexWrap,
-  animation,
-  boxShadow,
   transform,
   respondTo,
   appearance,
   transition,
   alignItems,
-  borderRadius,
-  transformStyle,
-  justifyContent,
   flexDirection,
-  linearGradient,
-  transformOrigin
+  justifyContent
 } from '../mixin'
 
-import snapshotTest from '@tests/snapshotTest'
-import functionImportTest from '@tests/functionImportTest'
+import snapshotTest from '@utilities/tests/snapshotTest'
+import functionImportTest from '@utilities/tests/functionImportTest'
 
 describe('mixin Functions', () => {
-  describe('linearGradient Function', () => {
-    functionImportTest(linearGradient)
-    snapshotTest(linearGradient('180deg'))
-    snapshotTest(linearGradient('180deg', 'rgba(0, 0, 0, 0) 44%'))
-  })
-
   describe('transition Function', () => {
     functionImportTest(transition)
     snapshotTest(transition('all 500ms linear'))
   })
 
-  describe('animation Function', () => {
-    functionImportTest(animation)
-    snapshotTest(animation('box1 500ms linear infinite'))
-  })
-
   describe('transform Function', () => {
     functionImportTest(transform)
     snapshotTest(transform('translate(0, 100%)'))
-  })
-
-  describe('transformOrigin Function', () => {
-    functionImportTest(transformOrigin)
-    snapshotTest(transformOrigin('50% 50%'))
-  })
-
-  describe('borderRadius Function', () => {
-    functionImportTest(borderRadius)
-    snapshotTest(borderRadius('50px'))
-  })
-
-  describe('transformStyle Function', () => {
-    functionImportTest(transformStyle)
-    snapshotTest(transformStyle('50px'))
   })
 
   describe('flexbox Function', () => {
@@ -74,11 +42,6 @@ describe('mixin Functions', () => {
   describe('flexDirection Function', () => {
     functionImportTest(flexDirection)
     snapshotTest(flexDirection('row'))
-  })
-
-  describe('boxShadow Function', () => {
-    functionImportTest(boxShadow)
-    snapshotTest(boxShadow('0 2px 8px 2px rgba(0, 0, 0, 0.16)'))
   })
 
   describe('flexWrap Function', () => {

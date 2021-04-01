@@ -1,6 +1,6 @@
 import variables from '../variables'
 
-import snapshotTest from '@tests/snapshotTest'
+import snapshotTest from '@utilities/tests/snapshotTest'
 
 describe('variables file', () => {
   snapshotTest(variables)

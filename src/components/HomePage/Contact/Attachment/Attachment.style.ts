@@ -69,4 +69,8 @@ export const StyledWrapper = styled.a`
       color: ${({ theme }) => theme.color.blue};
     }
   }
+
+  &:focus {
+    outline: 0;
+  }
 `
