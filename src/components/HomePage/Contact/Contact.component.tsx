@@ -22,7 +22,7 @@ const Contact = (): JSX.Element => {
     setLoading(true)
 
     axios
-      .post('https://wkm-server.azurewebsites.net/mail/send', values)
+      .post('https://wkm-backend.azurewebsites.net/mail/send', values)
       .then(() => {
         message.success('Pomyślnie wysłano wiadomość :)')
 

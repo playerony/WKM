@@ -11,7 +11,7 @@ export interface Padding {
   medium: number
 }
 
-export type Font = 'normal' | 'bold'
+export type Font = 'normal'
 
 export type Color = 'blue' | 'gray' | 'black' | 'cream'
 
@@ -36,8 +36,7 @@ const variables: Variable = {
     cream: '#FBF7F3'
   },
   font: {
-    normal: `'Montserrat', sans-serif`,
-    bold: "'HelveticaNeueBold', Helvetica, Arial, sans-serif"
+    normal: `'Montserrat', sans-serif`
   },
   breakpoint: {
     largeScreen: 1919,

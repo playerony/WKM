@@ -30,4 +30,4 @@ const TextArea = ({ label, onBlur, onFocus, ...restProps }: TextAreaProps): JSX.
   )
 }
 
-export default TextArea
+export default React.memo(TextArea)

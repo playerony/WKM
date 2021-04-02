@@ -28,7 +28,7 @@ const slides = [
 ]
 
 const HomePage = (): JSX.Element => {
-  const carouselRef: any = useRef()
+  const mainCarouselRef: any = useRef()
   const wrapperCarouselRef: any = useRef()
 
   const [_, setPage] = useState<number>(0)
@@ -42,7 +42,7 @@ const HomePage = (): JSX.Element => {
     }, 500)
   }, 5000)
 
-  const onButtonClick = (): void => carouselRef.current.goTo(1)
+  const onButtonClick = (): void => mainCarouselRef.current.goTo(1)
 
   const onSwipe = () => {
     if (instructionVisibility) {
@@ -67,7 +67,7 @@ const HomePage = (): JSX.Element => {
   }
 
   return (
-    <Carousel key="main-carousel" setPage={setPage} carouselRef={carouselRef} lazyLoad="ondemand">
+    <Carousel key="main-carousel" setPage={setPage} carouselRef={mainCarouselRef} lazyLoad="ondemand">
       <Welcome onButtonClick={onButtonClick} />
       {React.Children.toArray(slides.map((slide) => <HistorySlide {...slide} />))}
       <Gallery />

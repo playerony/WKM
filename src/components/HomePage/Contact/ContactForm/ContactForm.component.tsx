@@ -113,8 +113,8 @@ const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps
             type="ghost"
             htmlType="submit"
             loading={isLoading}
-            disabled={!form.isFieldsTouched(true) || form.getFieldsError().filter(({ errors }) => errors.length).length > 0}
             style={{ marginTop: 20 }}
+            disabled={!form.isFieldsTouched(true) || form.getFieldsError().filter(({ errors }) => errors.length).length > 0}
           >
             Wyślij
           </Button>

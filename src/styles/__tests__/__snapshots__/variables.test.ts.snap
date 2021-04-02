@@ -16,7 +16,6 @@ Object {
     "gray": "#AAAAAA",
   },
   "font": Object {
-    "bold": "'HelveticaNeueBold', Helvetica, Arial, sans-serif",
     "normal": "'Montserrat', sans-serif",
   },
   "padding": Object {

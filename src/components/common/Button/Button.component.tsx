@@ -5,4 +5,4 @@ import { StyledButton } from './Button.style'
 
 const Button = ({ children, ...restProps }: ButtonProps): JSX.Element => <StyledButton {...restProps}>{children}</StyledButton>
 
-export default Button
+export default React.memo(Button)
