@@ -1,11 +1,10 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 
 import message from 'antd/lib/message'
 
 import Attachment from './Attachment/Attachment.component'
 import ContactForm from './ContactForm/ContactForm.component'
-
-import usePost from '@hooks/usePost'
 
 import {
   StyledVideo,
@@ -19,12 +18,11 @@ import {
 const Contact = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false)
 
-  const { sendPostRequest: sendEmail } = usePost('/mail/send')
-
   const onFormFinish = (values: any, resetFields: () => void) => {
     setLoading(true)
 
-    sendEmail(values)
+    axios
+      .post('https://wkm-server.azurewebsites.net/mail/send', values)
       .then(() => {
         message.success('Pomyślnie wysłano wiadomość :)')
 
