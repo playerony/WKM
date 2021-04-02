@@ -21,7 +21,8 @@ const Contact = (): JSX.Element => {
   const onFormFinish = (values: any, resetFields: () => void) => {
     setLoading(true)
 
-    axios.post('https://wkm-server.azurewebsites.net/mail/send', values)
+    axios
+      .post('https://wkm-server.azurewebsites.net/mail/send', values)
       .then(() => {
         message.success('Pomyślnie wysłano wiadomość :)')
 
