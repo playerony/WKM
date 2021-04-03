@@ -35,6 +35,7 @@ export const StyledButton = styled(Button)`
       float: unset;
       display: block;
       margin: 0 auto;
+      margin-top: 10px !important;
       padding: ${`${theme.padding.small / 2}px ${theme.padding.medium}px`};
     `}
   }

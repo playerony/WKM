@@ -7,6 +7,13 @@ export const StyledWrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
+
+  ${({ theme }) => respondTo.mobileScreen`
+    .ant-form-item-explain-error {
+      font-size: 10px;
+      font-family: ${theme.font.normal};
+    }
+  `}
 `
 
 export const StyledVideo = styled.video`
@@ -21,7 +28,7 @@ export const StyledVideoMask = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: ${({ theme }) => theme.color.blue}33;
+  background-color: ${({ theme }) => theme.color.blue}22;
 `
 
 export const StyledContentWrapper = styled.div`

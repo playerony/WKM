@@ -11,6 +11,10 @@ export const StyledWrapper = styled.div`
   margin-top: 20px;
   margin-bottom: 5px;
   position: relative;
+
+  ${respondTo.mobileScreen`
+    margin-top: 10px;
+  `}
 `
 
 interface StyledInputProps {

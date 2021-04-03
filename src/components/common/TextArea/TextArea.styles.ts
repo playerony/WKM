@@ -12,6 +12,10 @@ export const StyledWrapper = styled.div`
   margin-top: 20px;
   margin-bottom: 5px;
   position: relative;
+
+  ${respondTo.mobileScreen`
+    margin-top: 10px;
+  `}
 `
 
 interface StyledTextAreaProps {
@@ -43,7 +47,7 @@ export const StyledTextArea = styled(TextArea)<StyledTextAreaProps>`
       `}
 
     ${({ theme }) => respondTo.mobileScreen`
-      height: 150px;
+      height: 125px;
       padding: ${theme.padding.small / 2}px 0;
     `}
   }
