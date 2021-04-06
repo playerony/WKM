@@ -4,11 +4,13 @@ import { flexbox, alignItems, respondTo, flexDirection, justifyContent } from '@
 
 export const StyledWrapper = styled.div`
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   position: relative;
+  height: calc(100vh - 30px);
 
   ${({ theme }) => respondTo.mobileScreen`
+    height: 100vh;
+
     .ant-form-item-explain-error {
       font-size: 10px;
       font-family: ${theme.font.normal};
