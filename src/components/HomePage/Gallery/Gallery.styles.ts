@@ -4,8 +4,8 @@ import { flexbox, justifyContent, respondTo } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
   position: relative;
+  height: calc(100vh - 30px);
   background-color: ${({ theme }) => theme.color.black};
   padding: ${({ theme }) => `0 ${theme.padding.big * 2}px`};
 
@@ -17,6 +17,7 @@ export const StyledWrapper = styled.div`
   `}
 
   ${respondTo.mobileScreen`
+    height: 100vh;
     padding: 0 10px;
   `}
 `

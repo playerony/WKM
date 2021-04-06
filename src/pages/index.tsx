@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
+import Menu from '@components/HomePage/Menu/Menu.component'
 import Contact from '@components/HomePage/Contact/Contact.component'
 import Gallery from '@components/HomePage/Gallery/Gallery.component'
 import Welcome from '@components/HomePage/Welcome/Welcome.component'
@@ -31,7 +32,7 @@ const HomePage = (): JSX.Element => {
   const mainCarouselRef: any = useRef()
   const wrapperCarouselRef: any = useRef()
 
-  const [_, setPage] = useState<number>(0)
+  const [page, setPage] = useState<number>(0)
   const [instructionVisibility, setInstructionVisibility] = useState<boolean>(true)
 
   useTimeout(() => {
@@ -52,6 +53,12 @@ const HomePage = (): JSX.Element => {
     }
   }
 
+  useEffect(() => {
+    mainCarouselRef.current && mainCarouselRef.current.goTo(page)
+  }, [page])
+
+  const changeSlide = (index: number): void => setPage(index)
+
   if (instructionVisibility) {
     return (
       <Carousel onSwipe={onSwipe} dots={false} carouselRef={wrapperCarouselRef} lazyLoad="ondemand">
@@ -67,12 +74,14 @@ const HomePage = (): JSX.Element => {
   }
 
   return (
-    <Carousel key="main-carousel" setPage={setPage} carouselRef={mainCarouselRef} lazyLoad="ondemand">
-      <Welcome onButtonClick={onButtonClick} />
-      {React.Children.toArray(slides.map((slide) => <HistorySlide {...slide} />))}
-      <Gallery />
-      <Contact />
-    </Carousel>
+    <Menu activePage={page} changeSlide={changeSlide}>
+      <Carousel key="main-carousel" setPage={setPage} carouselRef={mainCarouselRef} lazyLoad="ondemand">
+        <Welcome onButtonClick={onButtonClick} />
+        {React.Children.toArray(slides.map((slide) => <HistorySlide {...slide} />))}
+        <Gallery />
+        <Contact />
+      </Carousel>
+    </Menu>
   )
 }
 

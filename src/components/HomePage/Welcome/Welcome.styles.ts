@@ -4,12 +4,16 @@ import { flexbox, transition, respondTo } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   object-fit: cover;
   position: relative;
+  height: calc(100vh - 30px);
 
   ${flexbox()}
+
+  ${respondTo.smallScreen`
+    height: 100vh;
+  `}
 `
 
 export const StyledVideo = styled.video`

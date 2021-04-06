@@ -9,11 +9,15 @@ const { Text, Title } = Typography
 
 export const StyledWrapper = styled.div`
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   position: relative;
+  height: calc(100vh - 30px);
 
   ${flexbox()}
+
+  ${respondTo.mobileScreen`
+    height: 100vh;
+  `}
 `
 
 export const StyledVideo = styled.video`
