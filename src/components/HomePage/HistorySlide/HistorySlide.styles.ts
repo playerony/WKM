@@ -15,7 +15,6 @@ export const StyledWrapper = styled.div`
 
   ${flexbox()}
 
-
   ${respondTo.mobileScreen`
     height: 100vh;
   `}
