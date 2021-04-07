@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { transition, respondTo } from '@styles/mixin'
+import { transition } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
   width: 100%;
@@ -45,11 +45,4 @@ export const StyledLabel = styled.div`
       height: 30px;
     }
   }
-
-  ${respondTo.mobileScreen`
-    height: 0;
-    display: none;
-    overflow: hidden;
-    pointer-events: none;
-  `}
 `

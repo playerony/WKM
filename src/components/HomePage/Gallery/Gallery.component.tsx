@@ -46,7 +46,7 @@ const Gallery = (): JSX.Element => {
   const onVideoPlay = () => window.dispatchEvent(new Event('resize'))
 
   return (
-    <StyledWrapper ref={galleryRef as any} style={{ height: `calc(100vh - ${imageHeight / 2}px)` }}>
+    <StyledWrapper ref={galleryRef as any} style={{ height: `calc(100vh - 30px - ${imageHeight / 2}px)` }}>
       <StyledVideo loop={true} muted={true} autoPlay={true} onPlay={onVideoPlay} src="/static/video/gallery_page_video.mp4" />
       <StyledVideoMask />
       <RombGallery images={galleryImages} />

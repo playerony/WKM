@@ -17,13 +17,6 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   background-color: ${({ theme }) => theme.color.black};
 
   ${transition('height 300ms')}
-
-  ${respondTo.mobileScreen`
-    height: 0;
-    display: none;
-    overflow: hidden;
-    pointer-events: none;
-  `}
 `
 
 export const StyledContent = styled.div`
