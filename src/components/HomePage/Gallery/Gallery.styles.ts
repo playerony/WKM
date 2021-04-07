@@ -17,7 +17,6 @@ export const StyledWrapper = styled.div`
   `}
 
   ${respondTo.mobileScreen`
-    height: 100vh;
     padding: 0 10px;
   `}
 `

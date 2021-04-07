@@ -14,10 +14,6 @@ export const StyledWrapper = styled.div`
   height: calc(100vh - 30px);
 
   ${flexbox()}
-
-  ${respondTo.mobileScreen`
-    height: 100vh;
-  `}
 `
 
 export const StyledVideo = styled.video`
