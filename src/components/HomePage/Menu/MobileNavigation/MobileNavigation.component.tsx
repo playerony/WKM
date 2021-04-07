@@ -18,11 +18,13 @@ const MobileNavigation = ({ visible, onClose, activePage, changeSlide }: MobileN
   return (
     <StyledWrapper height={height} onClick={onClose}>
       <StyledLabelsWrapper>
-        {React.Children.toArray(navigationItems.map((navigationItem: string, index: number) => (
-          <StyledLabel selected={index === hoveredIndex} onClick={() => changeSlide(index)}>
-            {navigationItem}
-          </StyledLabel>
-        )))}
+        {React.Children.toArray(
+          navigationItems.map((navigationItem: string, index: number) => (
+            <StyledLabel selected={index === hoveredIndex} onClick={() => changeSlide(index)}>
+              {navigationItem}
+            </StyledLabel>
+          ))
+        )}
       </StyledLabelsWrapper>
     </StyledWrapper>
   )

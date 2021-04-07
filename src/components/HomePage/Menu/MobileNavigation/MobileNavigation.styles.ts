@@ -48,9 +48,11 @@ export const StyledLabel = styled.h1<StyledLabelProps>`
     ${transform('scale(1)')}
     ${transition('all 300ms')}
 
-    ${({ selected }) => selected && css`
-      color: ${({ theme }) => theme.color.cream}88;
-    `}
+    ${({ selected }) =>
+      selected &&
+      css`
+        color: ${({ theme }) => theme.color.cream}88;
+      `}
 
     &:hover {
       ${transform('scale(1.3)')}
