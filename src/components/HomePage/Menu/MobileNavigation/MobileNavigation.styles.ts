@@ -55,7 +55,7 @@ export const StyledLabel = styled.h1<StyledLabelProps>`
       `}
 
     &:hover {
-      ${transform('scale(1.3)')}
+      ${transform('scale(1.1)')}
     }
 
     ${({ theme }) => respondTo.mobileScreen`

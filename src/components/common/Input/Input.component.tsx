@@ -1,6 +1,6 @@
 import React, { useState, FocusEvent } from 'react'
 
-import { InputProps } from './Input.type'
+import { InputProps } from './Input.types'
 import { StyledInput, StyledLabel, StyledWrapper } from './Input.styles'
 
 const Input = ({ label, onBlur, onFocus, wrapperStyles, ...restProps }: InputProps): JSX.Element => {

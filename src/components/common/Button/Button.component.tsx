@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ButtonProps } from './Button.type'
-import { StyledButton } from './Button.style'
+import { ButtonProps } from './Button.types'
+import { StyledButton } from './Button.styles'
 
 const Button = ({ children, ...restProps }: ButtonProps): JSX.Element => <StyledButton {...restProps}>{children}</StyledButton>
 

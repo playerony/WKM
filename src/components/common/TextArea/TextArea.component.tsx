@@ -1,6 +1,6 @@
 import React, { useState, FocusEvent } from 'react'
 
-import { TextAreaProps } from './TextArea.type'
+import { TextAreaProps } from './TextArea.types'
 import { StyledTextArea, StyledLabel, StyledWrapper } from './TextArea.styles'
 
 const TextArea = ({ label, onBlur, onFocus, ...restProps }: TextAreaProps): JSX.Element => {

@@ -40,7 +40,7 @@ export const StyledInput = styled(Input)<StyledInputProps>`
     ${({ isInputFocus }) =>
       isInputFocus &&
       css`
-        border-bottom-color: ${({ theme }) => theme.color.blue};
+        border-bottom-color: ${({ theme }) => theme.color.gray};
       `}
 
     ${({ theme }) => respondTo.mobileScreen`
