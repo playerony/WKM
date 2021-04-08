@@ -6,13 +6,7 @@ import message from 'antd/lib/message'
 import Attachment from './Attachment/Attachment.component'
 import ContactForm from './ContactForm/ContactForm.component'
 
-import {
-  StyledVideo,
-  StyledWrapper,
-  StyledContentWrapper,
-  StyledContactSectionWrapper,
-  StyledDownloadSectionWrapper
-} from './Contact.styles'
+import { StyledVideo, StyledWrapper, StyledContentWrapper, StyledContactSectionWrapper, StyledDownloadSectionWrapper } from './Contact.styles'
 
 const Contact = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false)

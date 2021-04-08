@@ -1,13 +1,6 @@
 import React from 'react'
 
-import {
-  StyledTitle,
-  StyledVideo,
-  StyledDivider,
-  StyledWrapper,
-  StyledDescription,
-  StyledContentWrapper
-} from './HistorySlide.styles'
+import { StyledTitle, StyledVideo, StyledDivider, StyledWrapper, StyledDescription, StyledContentWrapper } from './HistorySlide.styles'
 import { HistorySlideProps } from './HistorySlide.types'
 
 const HistorySlide = ({ title, description, backgroundVideo }: HistorySlideProps): JSX.Element => (
