@@ -29,12 +29,3 @@ export const StyledVideo = styled.video`
   object-fit: cover;
   position: absolute;
 `
-
-export const StyledVideoMask = styled.div`
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  background-color: ${({ theme }) => theme.color.blue}22;
-`

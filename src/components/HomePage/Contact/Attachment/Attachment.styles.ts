@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Typography from 'antd/lib/typography'
 import { FileWordFilled } from '@ant-design/icons'
 
-import { transition, respondTo } from '@styles/mixin'
+import { transform, transition, respondTo } from '@styles/mixin'
 
 const { Title } = Typography
 
@@ -60,14 +60,11 @@ export const StyledWrapper = styled.a`
   cursor: pointer;
   position: relative;
 
-  &:hover {
-    ${StyledDownloadIcon} {
-      color: ${({ theme }) => theme.color.blue};
-    }
+  ${transform('scale(1)')}
+  ${transition('all 300ms')}
 
-    ${StyledLabel} {
-      color: ${({ theme }) => theme.color.blue};
-    }
+  &:hover {
+    ${transform('scale(1.1)')}
   }
 
   &:focus {

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { AttachmentProps } from './Attachment.type'
-import { StyledLabel, StyledWrapper, StyledDownloadIcon } from './Attachment.style'
+import { AttachmentProps } from './Attachment.types'
+import { StyledLabel, StyledWrapper, StyledDownloadIcon } from './Attachment.styles'
 
 const Attachment = ({ children, toDownload }: AttachmentProps): JSX.Element => (
   <StyledWrapper href={toDownload} download={children}>

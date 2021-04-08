@@ -18,15 +18,6 @@ export const StyledVideo = styled.video`
   object-fit: cover;
 `
 
-export const StyledVideoMask = styled.div`
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: ${({ theme }) => theme.color.blue}22;
-`
-
 export const StyledButton = styled.span`
   left: 50%;
   bottom: 70px;
@@ -46,13 +37,15 @@ export const StyledButton = styled.span`
   border-bottom: 1px solid ${({ theme }) => theme.color.cream}55;
 
   ${transition('all 300ms linear')}
-  ${respondTo.mobileScreen`
-    width: 120px;
-    font-size: 10px;
-    margin-left: -55px;
-  `}
 
   &:hover {
     background-color: ${({ theme }) => theme.color.cream}17;
   }
+
+  ${respondTo.mobileScreen`
+    bottom: 50px;
+    width: 120px;
+    font-size: 10px;
+    margin-left: -55px;
+  `}
 `

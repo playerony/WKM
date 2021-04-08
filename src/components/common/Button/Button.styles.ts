@@ -17,8 +17,8 @@ export const StyledButton = styled(Button)`
 
     &:hover,
     &:focus {
-      color: ${({ theme }) => theme.color.blue};
-      border-color: ${({ theme }) => theme.color.blue};
+      color: ${({ theme }) => theme.color.gray};
+      border-color: ${({ theme }) => theme.color.gray};
     }
 
     &:disabled {

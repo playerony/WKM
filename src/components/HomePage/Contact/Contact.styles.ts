@@ -22,15 +22,6 @@ export const StyledVideo = styled.video`
   object-fit: cover;
 `
 
-export const StyledVideoMask = styled.div`
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: ${({ theme }) => theme.color.blue}22;
-`
-
 export const StyledContentWrapper = styled.div`
   top: 0;
   left: 0;

@@ -14,6 +14,7 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   overflow: hidden;
   position: absolute;
   height: ${({ height }) => height};
+  cursor: url(static/images/close.png), auto;
   background-color: ${({ theme }) => theme.color.black};
 
   ${transition('height 300ms')}

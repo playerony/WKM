@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { StyledWrapper, StyledLabel, StyledLoader } from './InstructionPage.styles'
+import { StyledWrapper, StyledLogo, StyledLabel, StyledLoader, StyledInstructionWrapper } from './InstructionPage.styles'
 
 const InstructionPage = (): JSX.Element => (
   <StyledWrapper>
-    <StyledLoader />
-    <StyledLabel>przeciągnij, aby przeglądać</StyledLabel>
+    <StyledLogo />
+    <StyledInstructionWrapper>
+      <StyledLoader />
+      <StyledLabel>przeciągnij, aby przeglądać</StyledLabel>
+    </StyledInstructionWrapper>
   </StyledWrapper>
 )
 
