@@ -4,9 +4,7 @@ import { StyledWrapper, StyledLogo, StyledLabel, StyledLoader, StyledInstruction
 
 const InstructionPage = (): JSX.Element => (
   <StyledWrapper>
-    <StyledLogo>
-      WKM
-    </StyledLogo>
+    <StyledLogo>WKM</StyledLogo>
     <StyledInstructionWrapper>
       <StyledLoader />
       <StyledLabel>przeciągnij, aby przeglądać</StyledLabel>
