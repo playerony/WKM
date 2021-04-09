@@ -59,8 +59,8 @@ interface StyledLabelProps {
 
 export const StyledLabel = styled(Title)<StyledLabelProps>`
   &&& {
-    margin: 0;
     top: 15px;
+    margin: 0;
     padding: 0;
     font-weight: 100;
     position: absolute;

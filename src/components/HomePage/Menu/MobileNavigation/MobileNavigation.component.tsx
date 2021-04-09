@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
-import { StyledWrapper, StyledLabel, StyledLabelsWrapper } from './MobileNavigation.styles'
 import { MobileNavigationProps } from './MobileNavigation.types'
+import { StyledWrapper, StyledLabel, StyledLabelsWrapper } from './MobileNavigation.styles'
 
 const navigationItems = ['Strona główna', 'Historia', 'Pomysł', 'Rozwój', 'Galeria', 'Kontakt']
 
 const MobileNavigation = ({ visible, onClose, activePage, changeSlide }: MobileNavigationProps): JSX.Element => {
-  const height = visible ? '100vh' : 0
+  const height = visible ? '100%' : 0
   const [hoveredIndex, setHoveredIndex] = useState<number>(activePage)
 
   useEffect(() => {

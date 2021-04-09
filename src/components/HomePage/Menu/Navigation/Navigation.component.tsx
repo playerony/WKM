@@ -19,7 +19,7 @@ const BOX_DIAGONAL_LENGTH = BOX_SIZE * Math.sqrt(2)
 const HALF_OF_BOX_DIAGONAL_LENGTH = BOX_DIAGONAL_LENGTH / 2
 
 const Navigation = ({ visible, onClose, activePage, changeSlide }: NavigationProps): JSX.Element => {
-  const height = visible ? '100vh' : 0
+  const height = visible ? '100%' : 0
   const [hoveredIndex, setHoveredIndex] = useState<number>(activePage)
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const Navigation = ({ visible, onClose, activePage, changeSlide }: NavigationPro
           ))
         )}
       </StyledFrontNavigationContainer>
-      <Navigator hoveredIndex={hoveredIndex} initialIndex={activePage} onHover={setHoveredIndex} onClick={changeSlide} />
+      <Navigator initialIndex={activePage} onHover={setHoveredIndex} onClick={changeSlide} />
     </StyledWrapper>
   )
 }

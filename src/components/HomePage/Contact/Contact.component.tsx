@@ -17,7 +17,7 @@ const Contact = (): JSX.Element => {
     axios
       .post('https://wkm-backend.azurewebsites.net/mail/send', values)
       .then(() => {
-        message.success('Pomyślnie wysłano wiadomość :)')
+        message.success('Pomyślnie wysłano wiadomość')
 
         setLoading(false)
 

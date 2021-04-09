@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 
-import { flexbox, transition, justifyContent } from '@styles/mixin'
+import Typography from 'antd/lib/typography'
+
+import { flexbox, transform, transition, justifyContent } from '@styles/mixin'
+
+const { Title } = Typography
 
 export const StyledWrapper = styled.div`
   left: 0;
@@ -8,9 +12,30 @@ export const StyledWrapper = styled.div`
   height: 50px;
   width: 100vw;
   z-index: 100;
+  cursor: default;
   position: absolute;
   background-color: ${({ theme }) => theme.color.black};
+`
 
+export const StyledLogo = styled(Title)`
+  &&& {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+    position: absolute;
+    letter-spacing: 3px;
+    left: calc(50% - 200px);
+    color: ${({ theme }) => theme.color.cream};
+    font-family: ${({ theme }) => theme.font.normal};
+
+    ${transform(`translateX(-50%)`)}
+  }
+`
+
+export const StyledItemsWrapper = styled.div`
   ${flexbox()}
   ${justifyContent('center')}
 
@@ -21,7 +46,6 @@ export const StyledWrapper = styled.div`
 
 interface StyledItemProps {
   active: boolean
-  selected: boolean
 }
 
 export const StyledItem = styled.div<StyledItemProps>`
@@ -35,12 +59,6 @@ export const StyledItem = styled.div<StyledItemProps>`
   &:hover {
     background-color: ${({ theme }) => theme.color.gray};
   }
-
-  ${({ selected }) =>
-    selected &&
-    css`
-      background-color: 1px solid ${({ theme }) => theme.color.cream};
-    `}
 
   ${({ active }) =>
     active &&

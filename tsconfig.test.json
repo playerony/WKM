@@ -49,11 +49,10 @@
     }
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "jest.config.js",
     "jest.setup.js",
+    "next-env.d.ts",
     "jest.config.js"
   ],
   "exclude": [
