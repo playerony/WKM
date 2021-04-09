@@ -11,8 +11,8 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   bottom: 0;
   z-index: 20;
   width: 100vw;
+  position: fixed;
   overflow: hidden;
-  position: absolute;
   height: ${({ height }) => height};
   cursor: url(static/images/close.png), auto;
   background-color: ${({ theme }) => theme.color.black};
