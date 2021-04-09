@@ -10,9 +10,7 @@ const Navigator = ({ onHover, onClick, initialIndex }: NavigatorProps): JSX.Elem
 
   return (
     <StyledWrapper>
-      <StyledLogo>
-        WKM
-      </StyledLogo>
+      <StyledLogo>WKM</StyledLogo>
       <StyledItemsWrapper>
         <StyledItem active={initialIndex === 0} onMouseOver={onMouseOver(0)} onClick={onItemClick(0)} />
         <StyledItem active={initialIndex === 1} onMouseOver={onMouseOver(1)} onClick={onItemClick(1)} />

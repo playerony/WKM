@@ -4,9 +4,9 @@ exports[`GlobalStyles Component snapshot test should match 1`] = `
 <head>
   <style
     data-styled="active"
-    data-styled-version="5.2.1"
+    data-styled-version="5.2.3"
   >
     html,body{cursor:url(static/images/drag.png),auto;color:#AAAAAA;font-family:'Montserrat',sans-serif;background-color:#000000;}
   </style>
 </head>
-`
+`;
