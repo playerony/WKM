@@ -28,7 +28,7 @@ export const StyledLabel = styled.div`
     position: absolute;
     background-color: ${({ theme }) => theme.color.gray}55;
 
-    ${transition('height 300ms')}
+    ${transition('height 600ms')}
   }
 
   &::after {

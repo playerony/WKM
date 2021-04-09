@@ -3,12 +3,11 @@ import styled from 'styled-components'
 import { transform, transition, respondTo } from '@styles/mixin'
 
 export const StyledWrapper = styled.div`
-  flex-grow: 1;
   margin: auto;
-  position: relative;
-
+  flex-grow: 1;
   display: grid;
   grid-gap: 3vmin;
+  position: relative;
   align-items: center;
   justify-items: center;
   grid-template-rows: repeat(3, 1fr);
