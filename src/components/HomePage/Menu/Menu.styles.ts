@@ -17,6 +17,7 @@ export const StyledLabel = styled.div`
   position: relative;
   text-transform: uppercase;
   color: ${({ theme }) => theme.color.cream};
+  background-color: ${({ theme }) => theme.color.black};
 
   &::before {
     left: 0;
@@ -25,7 +26,7 @@ export const StyledLabel = styled.div`
     width: 100%;
     content: '';
     position: absolute;
-    background-color: #2e3234;
+    background-color: ${({ theme }) => theme.color.gray}55;
 
     ${transition('height 300ms')}
   }

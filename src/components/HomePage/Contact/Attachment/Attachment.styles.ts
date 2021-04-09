@@ -47,7 +47,7 @@ export const StyledLabel = styled(Title)`
     `}
 
     ${respondTo.smallScreen`
-      font-size: 32px;
+      font-size: 30px;
     `}
 
     ${respondTo.mobileScreen`

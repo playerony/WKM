@@ -31,12 +31,20 @@ export const StyledButton = styled(Button)`
       }
     }
 
+    ${({ theme }) => respondTo.smallScreen`
+      float: unset;
+      display: block;
+      margin: 0 auto;
+      padding: 15px ${theme.padding.big}px;
+    `}
+
     ${({ theme }) => respondTo.mobileScreen`
       float: unset;
       display: block;
       margin: 0 auto;
-      margin-top: 10px !important;
-      padding: ${`${theme.padding.small / 2}px ${theme.padding.medium}px`};
+      font-size: 12px;
+      margin-top: 5px !important;
+      padding: ${theme.padding.small / 2}px ${theme.padding.medium}px;
     `}
   }
 `

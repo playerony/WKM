@@ -41,7 +41,7 @@ export const StyledLabel = styled.h1<StyledLabelProps>`
     font-weight: 300;
     text-align: center;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.color.cream}22;
+    color: ${({ theme }) => theme.color.cream}33;
     font-family: ${({ theme }) => theme.font.normal};
     margin: ${({ theme }) => theme.padding.small}px 0;
 

@@ -32,7 +32,7 @@ const Contact = (): JSX.Element => {
 
   return (
     <StyledWrapper>
-      <StyledVideo loop={true} muted={true} autoPlay={true} src="/static/video/contact_page_video.mp4" />
+      <StyledVideo loop={true} muted={true} autoPlay={true} src="/static/videos/contact_page_video.mp4" />
       <StyledContentWrapper>
         <StyledDownloadSectionWrapper>
           <Attachment toDownload="/static/download/attachment1.docx">deklaracja.docx</Attachment>

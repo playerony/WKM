@@ -14,7 +14,7 @@ export const StyledWrapper = styled.div`
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(6, 1fr);
 
-  ${respondTo.mobileScreen`
+  ${respondTo.smallScreen`
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(4, 1fr);
   `}
@@ -34,13 +34,13 @@ export const StyledGalleryImage = styled.img`
   &:nth-child(5n + 1) {
     grid-column: 2 / span 2;
 
-    ${respondTo.mobileScreen`
+    ${respondTo.smallScreen`
       grid-column: span 2;
     `}
   }
 
   &:nth-child(3n + 1) {
-    ${respondTo.mobileScreen`
+    ${respondTo.smallScreen`
       grid-column: 2 / span 2;
     `}
   }

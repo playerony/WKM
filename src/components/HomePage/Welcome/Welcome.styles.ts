@@ -24,6 +24,7 @@ export const StyledButton = styled.span`
   width: 135px;
   font-size: 12px;
   cursor: pointer;
+  padding-top: 9px;
   position: absolute;
   margin-left: -63px;
   text-align: center;
@@ -32,7 +33,6 @@ export const StyledButton = styled.span`
   text-transform: uppercase;
   background-color: transparent;
   color: ${({ theme }) => theme.color.cream};
-  padding-top: ${({ theme }) => theme.padding.small / 2}px;
   border-top: 1px solid ${({ theme }) => theme.color.cream}55;
   border-bottom: 1px solid ${({ theme }) => theme.color.cream}55;
 
@@ -44,8 +44,8 @@ export const StyledButton = styled.span`
 
   ${respondTo.mobileScreen`
     bottom: 50px;
-    width: 120px;
-    font-size: 10px;
-    margin-left: -55px;
+    width: 110px;
+    font-size: 9px;
+    margin-left: -50px;
   `}
 `

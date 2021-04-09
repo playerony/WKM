@@ -13,7 +13,7 @@ export const StyledWrapper = styled.div`
   ${justifyContent('center')}
 
   ${({ theme }) => respondTo.mediumScreen`
-    padding: ${`0 ${theme.padding.medium * 2}px`};
+    padding: 0 ${theme.padding.medium * 2}px;
   `}
 
   ${respondTo.mobileScreen`
