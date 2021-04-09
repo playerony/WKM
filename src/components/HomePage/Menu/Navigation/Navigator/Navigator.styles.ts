@@ -7,7 +7,9 @@ export const StyledWrapper = styled.div`
   bottom: 0;
   height: 50px;
   width: 100vw;
+  z-index: 100;
   position: absolute;
+  background-color: ${({ theme }) => theme.color.black};
 
   ${flexbox()}
   ${justifyContent('center')}

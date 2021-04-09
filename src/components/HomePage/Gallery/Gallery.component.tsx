@@ -47,7 +47,7 @@ const Gallery = (): JSX.Element => {
 
   return (
     <StyledWrapper ref={galleryRef as any} style={{ height: `calc(100vh - 30px - ${imageHeight / 2}px)` }}>
-      <StyledVideo loop={true} muted={true} autoPlay={true} onPlay={onVideoPlay} src="/static/video/gallery_page_video.mp4" />
+      <StyledVideo loop={true} muted={true} autoPlay={true} onPlay={onVideoPlay} src="/static/videos/gallery_page_video.mp4" />
       <RombGallery images={galleryImages} />
     </StyledWrapper>
   )

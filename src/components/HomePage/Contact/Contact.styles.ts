@@ -54,6 +54,7 @@ export const StyledDownloadSectionWrapper = styled.section`
 
   ${({ theme }) => respondTo.smallScreen`
     padding: ${theme.padding.medium}px;
+    padding-right: 0;
   `}
 
   ${respondTo.mobileScreen`
@@ -74,6 +75,7 @@ export const StyledContactSectionWrapper = styled.section`
   `}
 
   ${({ theme }) => respondTo.smallScreen`
+    flex: 2;
     padding: ${theme.padding.medium}px;
   `}
 

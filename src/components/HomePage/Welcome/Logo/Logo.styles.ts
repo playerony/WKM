@@ -30,9 +30,8 @@ export const StyledText = styled(Title)`
     `}
 
     ${respondTo.mobileScreen`
-      font-size: 18px;
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 12px;
+      margin-bottom: 12px;
     `}
   }
 `

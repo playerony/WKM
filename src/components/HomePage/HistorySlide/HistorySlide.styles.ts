@@ -33,7 +33,7 @@ export const StyledContentWrapper = styled.section`
   ${respondTo.smallScreen`
     top: 50%;
     left: 50%;
-    width: 50%;
+    width: 70%;
 
     ${transform(`translateX(-50%) translateY(-50%)`)}
   `}
@@ -49,7 +49,13 @@ export const StyledTitle = styled(Title)`
     font-family: ${({ theme }) => theme.font.normal};
 
     ${respondTo.smallScreen`
+      font-size: 40px;
       text-align: center;
+      text-transform: uppercase;
+    `}
+
+    ${respondTo.mobileScreen`
+      font-size: 30px;
     `}
   }
 `
@@ -58,14 +64,15 @@ export const StyledDivider = styled(Divider)`
   &&& {
     border-top-color: ${({ theme }) => theme.color.cream};
 
-    ${respondTo.mobileScreen`
-      width: 70%;
+    ${respondTo.smallScreen`
+      display: none;
     `}
   }
 `
 
 export const StyledDescription = styled(Text)`
   &&& {
+    margin: 0 auto;
     display: block;
     line-height: 2;
     max-width: 500px;
@@ -74,12 +81,15 @@ export const StyledDescription = styled(Text)`
     font-family: ${({ theme }) => theme.font.normal};
 
     ${respondTo.smallScreen`
+      font-size: 18px;
+      line-height: 1.7;
       text-align: center;
     `}
 
     ${respondTo.mobileScreen`
       margin: 0 auto;
-      line-height: 1.7;
+      font-size: 12px;
+      line-height: 1.6;
       letter-spacing: 2.5px;
     `}
   }

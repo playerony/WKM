@@ -13,17 +13,17 @@ import useTimeout from '@hooks/useTimeout'
 const slides = [
   {
     title: 'Historia',
-    backgroundVideo: '/static/video/history_slide_video.mp4',
+    backgroundVideo: '/static/videos/history_slide_video.mp4',
     description: `Historia powstania klubu, to historia ludzi, którzy zarazili nas swoją pasją, stylem życia i miłością do motocykli. Nie sposób nie wymienić takich nazwisk jak Bartek KOSAR, Mirek BANIA czy Rafał GÓRSKI.`
   },
   {
     title: 'Pomysł',
-    backgroundVideo: '/static/video/idea_slide_video.mp4',
+    backgroundVideo: '/static/videos/idea_slide_video.mp4',
     description: `Sam pomysł stworzenia klubu zrodził się w ich głowach dopiero wiosną 2008 roku podczas wypadu na Słowację. Tam właśnie padły pierwsze pomysły, w tym nasza obecna nazwa.`
   },
   {
     title: 'Rozwój',
-    backgroundVideo: '/static/video/development_slide_video.mp4',
+    backgroundVideo: '/static/videos/development_slide_video.mp4',
     description: `Kolejne lata przyniosły ze sobą dalszy rozwój, podjęcie współpracy i zawarcie przyjaźni z innymi klubami, w tym m.in. z Blue Knights. Udzielamy się w licznych imprezach charytatywnych, w 2012 roku przyłączyliśmy się do 20-go Finału WOŚP w Gliwicach. Od czasu założenia WKM przydarzyło się wiele bliższych i dalszych, pełnych przygód, radości, a czasami także trudnych chwil, podróży na dwóch kółkach.`
   }
 ]

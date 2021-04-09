@@ -26,6 +26,7 @@ const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps
       <Form.Item
         name="firstname"
         validateFirst={true}
+        validateTrigger="onChange"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -45,6 +46,7 @@ const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps
       <Form.Item
         name="lastname"
         validateFirst={true}
+        validateTrigger="onChange"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -64,6 +66,7 @@ const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps
       <Form.Item
         name="email"
         validateFirst={true}
+        validateTrigger="onChange"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
@@ -86,6 +89,7 @@ const ContactForm = ({ isLoading, handleFinish, ...formProps }: ContactFormProps
       <Form.Item
         name="message"
         validateFirst={true}
+        validateTrigger="onChange"
         labelCol={{ span: 24, style: { padding: 0, height: 28 } }}
         rules={[
           {
