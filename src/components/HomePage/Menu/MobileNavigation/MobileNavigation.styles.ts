@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { transform, transition, flexbox, justifyContent, alignItems, flexDirection, respondTo } from '@styles/mixin'
+import { transform, transition, userSelect, flexbox, justifyContent, alignItems, flexDirection, respondTo } from '@styles/mixin'
 
 interface StyledWrapperProps {
   height: number | string
@@ -63,4 +63,23 @@ export const StyledLabel = styled.h1<StyledLabelProps>`
       margin: ${theme.padding.small / 2}px 0;
     `}
   }
+`
+
+export const StyledCredits = styled.span`
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  letter-spacing: 3px;
+  cursor: url(static/images/close.png), auto;
+  color: ${({ theme }) => theme.color.gray}55;
+  font-family: ${({ theme }) => theme.font.normal};
+
+  ${userSelect('none')}
 `

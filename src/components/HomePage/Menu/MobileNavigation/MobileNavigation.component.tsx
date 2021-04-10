@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { MobileNavigationProps } from './MobileNavigation.types'
-import { StyledWrapper, StyledLabel, StyledLabelsWrapper } from './MobileNavigation.styles'
+import { StyledWrapper, StyledCredits, StyledLabel, StyledLabelsWrapper } from './MobileNavigation.styles'
 
 const navigationItems = ['Strona główna', 'Historia', 'Pomysł', 'Rozwój', 'Galeria', 'Kontakt']
 
@@ -15,6 +15,8 @@ const MobileNavigation = ({ visible, onClose, activePage, changeSlide }: MobileN
     }
   }, [activePage])
 
+  const currentYear = new Date().getUTCFullYear()
+
   return (
     <StyledWrapper height={height} onClick={onClose}>
       <StyledLabelsWrapper>
@@ -26,6 +28,7 @@ const MobileNavigation = ({ visible, onClose, activePage, changeSlide }: MobileN
           ))
         )}
       </StyledLabelsWrapper>
+      <StyledCredits>{currentYear} PAWEŁ WOJTASIŃSKI</StyledCredits>
     </StyledWrapper>
   )
 }
