@@ -1,12 +1,14 @@
 import React from 'react'
 
 import { NavigatorProps } from './Navigator.types'
-import { StyledItem, StyledLogo, StyledWrapper, StyledItemsWrapper } from './Navigator.styles'
+import { StyledItem, StyledLogo, StyledCredits, StyledWrapper, StyledItemsWrapper } from './Navigator.styles'
 
 const Navigator = ({ onHover, onClick, initialIndex }: NavigatorProps): JSX.Element => {
   const onMouseOver = (index: number) => () => onHover(index)
 
   const onItemClick = (index: number) => () => onClick(index)
+
+  const currentYear = new Date().getUTCFullYear()
 
   return (
     <StyledWrapper>
@@ -19,6 +21,7 @@ const Navigator = ({ onHover, onClick, initialIndex }: NavigatorProps): JSX.Elem
         <StyledItem active={initialIndex === 4} onMouseOver={onMouseOver(4)} onClick={onItemClick(4)} />
         <StyledItem active={initialIndex === 5} onMouseOver={onMouseOver(5)} onClick={onItemClick(5)} />
       </StyledItemsWrapper>
+      <StyledCredits>{currentYear} PAWEŁ WOJTASIŃSKI</StyledCredits>
     </StyledWrapper>
   )
 }

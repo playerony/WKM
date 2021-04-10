@@ -9,7 +9,7 @@ interface StyledWrapperProps {
 export const StyledWrapper = styled.div<StyledWrapperProps>`
   left: 0;
   bottom: 0;
-  z-index: 20;
+  z-index: 100;
   width: 100vw;
   position: fixed;
   overflow: hidden;
@@ -32,7 +32,7 @@ export const StyledFrontNavigationContainer = styled.div`
   position: absolute;
   width: max-content;
 
-  ${transition('all 300ms')}
+  ${transition('all 600ms')}
 `
 
 interface StyledFrontNavigationItemProps {
@@ -56,7 +56,7 @@ export const StyledFrontNavigationItem = styled.h1<StyledFrontNavigationItemProp
 
     ${flexbox()}
     ${alignItems('center')}
-    ${transition('all 300ms')}
+    ${transition('all 600ms')}
     ${justifyContent('center')}
 
     ${({ theme, selected }) =>
@@ -76,7 +76,7 @@ export const StyledBackNavigationContainer = styled.div`
   position: absolute;
   transform-origin: bottom left;
 
-  ${transition('all 300ms')}
+  ${transition('all 600ms')}
   ${transform('rotateZ(45deg)')}
 
   & > div:first-child {
@@ -98,6 +98,7 @@ export const StyledBackNavigationItem = styled.div<StyledBackNavigationItemProps
 
   ${flexbox()}
   ${alignItems('center')}
+  ${transition('all 600ms')}
   ${justifyContent('center')}
 
   & > span {
