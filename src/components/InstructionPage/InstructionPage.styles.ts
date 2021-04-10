@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import Typography from 'antd/lib/typography'
 
-import { flexbox, transform, alignItems, justifyContent, flexDirection, respondTo } from '@styles/mixin'
+import { flexbox, transform, alignItems, justifyContent, userSelect, flexDirection, respondTo } from '@styles/mixin'
 
 const { Text, Title } = Typography
 
@@ -37,7 +37,9 @@ export const StyledLogo = styled(Title)`
     border-radius: 100%;
     color: ${({ theme }) => theme.color.cream}AA;
     font-family: ${({ theme }) => theme.font.normal};
-    border: 1px dotted ${({ theme }) => theme.color.gray}55;
+    border: 2px dashed ${({ theme }) => theme.color.gray}22;
+
+    ${userSelect('none')}
 
     ${respondTo.mediumScreen`
       width: 300px;
@@ -53,11 +55,12 @@ export const StyledLogo = styled(Title)`
       line-height: 275px;
     `}
 
-    ${respondTo.mobileScreen`
-      width: 170px;
-      height: 170px;
-      font-size: 24px;
-      line-height: 170px;
+    ${({ theme }) => respondTo.mobileScreen`
+      width: 180px;
+      height: 180px;
+      font-size: 26px;
+      line-height: 180px;
+      border-color: ${theme.color.gray}44;
     `}
   }
 `
@@ -68,13 +71,14 @@ export const StyledInstructionWrapper = styled.div`
   position: absolute;
 
   ${flexbox()}
+  ${userSelect('none')}
   ${alignItems('center')}
   ${flexDirection('column')}
   ${justifyContent('center')}
   ${transform(`translateX(-50%)`)}
 
   ${respondTo.mobileScreen`
-    bottom: 50px;
+    bottom: 40px;
   `}
 `
 
@@ -95,7 +99,7 @@ export const StyledLoader = styled.div`
 export const StyledLabel = styled(Text)`
   font-size: 12px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.gray};
+  color: ${({ theme }) => theme.color.gray}AA;
   font-family: ${({ theme }) => theme.font.normal};
   padding-top: ${({ theme }) => theme.padding.small}px;
 

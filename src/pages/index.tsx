@@ -41,7 +41,7 @@ const HomePage = (): JSX.Element => {
     setTimeout(() => {
       setInstructionVisibility(false)
     }, 500)
-  }, 5000)
+  }, 10000)
 
   const onButtonClick = (): void => mainCarouselRef.current.goTo(1)
 

@@ -76,3 +76,12 @@ export const respondTo = (Object.keys(variables.breakpoint) as (keyof Breakpoint
 
   return accumulator
 }, {} as any)
+
+export const userSelect = (value: string): FlattenSimpleInterpolation => css`
+  user-select: ${value};
+  -ms-user-select: ${value};
+  -moz-user-select: ${value};
+  -khtml-user-select: ${value};
+  -webkit-user-select: ${value};
+  -webkit-touch-callout: ${value};
+`
