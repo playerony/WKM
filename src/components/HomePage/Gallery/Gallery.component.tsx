@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import RombGallery from '@components/common/RombGallery/RombGallery.component'
 
@@ -36,18 +36,9 @@ const Gallery = (): JSX.Element => {
     }
   }
 
-  useEffect(() => {
-    handleResize()
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  const onVideoPlay = () => window.dispatchEvent(new Event('resize'))
-
   return (
-    <StyledWrapper ref={galleryRef as any} style={{ height: `calc(100vh - 30px - ${imageHeight / 2}px)` }}>
-      <StyledVideo loop={true} muted={true} autoPlay={true} onPlay={onVideoPlay} src="/static/videos/gallery_page_video.mp4" />
+    <StyledWrapper ref={galleryRef as any} style={{ height: `calc(100vh - 25px - ${imageHeight / 2}px)` }}>
+      <StyledVideo loop={true} muted={true} autoPlay={true} onPlay={handleResize} src="/static/videos/gallery_page_video.mp4" />
       <RombGallery images={galleryImages} />
     </StyledWrapper>
   )

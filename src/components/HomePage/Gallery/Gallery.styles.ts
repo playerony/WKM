@@ -5,7 +5,7 @@ import { flexbox, justifyContent, respondTo } from '@styles/mixin'
 export const StyledWrapper = styled.div`
   width: 100vw;
   position: relative;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 25px);
   background-color: ${({ theme }) => theme.color.black};
   padding: ${({ theme }) => `0 ${theme.padding.big * 2}px`};
 

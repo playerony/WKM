@@ -1,11 +1,13 @@
 import React from 'react'
 
-import { StyledText, StyledWrapper } from './Logo.styles'
+import { StyledText, StyledWrapper, StyledFullWidthDivider } from './Logo.styles'
 
 const Logo = (): JSX.Element => (
   <StyledWrapper>
     <StyledText>wojskowy</StyledText>
-    <StyledText>klub</StyledText>
+    <StyledFullWidthDivider>
+      <StyledText>klub</StyledText>
+    </StyledFullWidthDivider>
     <StyledText>motocyklowy</StyledText>
   </StyledWrapper>
 )
