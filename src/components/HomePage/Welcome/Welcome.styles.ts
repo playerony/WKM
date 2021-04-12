@@ -7,7 +7,7 @@ export const StyledWrapper = styled.div`
   overflow: hidden;
   object-fit: cover;
   position: relative;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 25px);
 
   ${flexbox()}
 `
@@ -20,30 +20,32 @@ export const StyledVideo = styled.video`
 
 export const StyledButton = styled.span`
   left: 50%;
-  bottom: 70px;
-  width: 135px;
-  font-size: 12px;
+  bottom: 50px;
+  width: 120px;
+  font-size: 10px;
   cursor: pointer;
   padding-top: 9px;
+  font-weight: 600;
   position: absolute;
-  margin-left: -63px;
+  margin-left: -50px;
   text-align: center;
   letter-spacing: 2px;
   padding-bottom: 9px;
   text-transform: uppercase;
   background-color: transparent;
   color: ${({ theme }) => theme.color.cream};
-  border-top: 1px solid ${({ theme }) => theme.color.cream}55;
-  border-bottom: 1px solid ${({ theme }) => theme.color.cream}55;
+  font-family: ${({ theme }) => theme.font.normal};
+  border-top: 1px solid ${({ theme }) => theme.color.cream}44;
+  border-bottom: 1px solid ${({ theme }) => theme.color.cream}44;
 
-  ${transition('all 300ms linear')}
+  ${transition('all 300ms')}
 
   &:hover {
-    background-color: ${({ theme }) => theme.color.cream}17;
+    background-color: ${({ theme }) => theme.color.cream}10;
   }
 
   ${respondTo.mobileScreen`
-    bottom: 50px;
+    bottom: 40px;
     width: 110px;
     font-size: 9px;
     margin-left: -50px;

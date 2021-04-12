@@ -16,14 +16,23 @@ export const StyledWrapper = styled.section`
   ${justifyContent('center')}
 `
 
+export const StyledFullWidthDivider = styled.div`
+  width: 100%;
+  text-align: center;
+  border-top: 1px dashed ${({ theme }) => theme.color.cream}33;
+  border-bottom: 1px dashed ${({ theme }) => theme.color.cream}33;
+`
+
 export const StyledText = styled(Title)`
   &&& {
-    font-weight: 300;
+    margin: 0;
+    font-size: 34px;
+    font-weight: 200;
     letter-spacing: 8px;
     text-transform: uppercase;
     color: ${({ theme }) => theme.color.cream};
-    margin-top: ${({ theme }) => theme.padding.small}px;
-    margin-bottom: ${({ theme }) => theme.padding.small}px;
+    padding-top: ${({ theme }) => theme.padding.small / 2}px;
+    padding-bottom: ${({ theme }) => theme.padding.small / 2}px;
 
     ${respondTo.smallScreen`
       font-size: 30px;
@@ -31,8 +40,8 @@ export const StyledText = styled(Title)`
 
     ${respondTo.mobileScreen`
       font-size: 24px;
-      margin-top: 12px;
-      margin-bottom: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
     `}
   }
 `

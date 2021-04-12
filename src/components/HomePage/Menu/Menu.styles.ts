@@ -9,10 +9,10 @@ export const StyledWrapper = styled.div`
 
 export const StyledLabel = styled.div`
   width: 100%;
-  height: 30px;
+  height: 25px;
   font-size: 10px;
   cursor: pointer;
-  line-height: 30px;
+  line-height: 25px;
   text-align: center;
   position: relative;
   text-transform: uppercase;
@@ -28,22 +28,26 @@ export const StyledLabel = styled.div`
     position: absolute;
     background-color: ${({ theme }) => theme.color.gray}55;
 
-    ${transition('height 600ms')}
+    ${transition('height 300ms')}
   }
 
   &::after {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 25px;
     z-index: 1px;
+    font-size: 9px;
     content: 'MENU';
+    font-weight: 600;
     position: absolute;
+    letter-spacing: 2px;
+    font-family: ${({ theme }) => theme.font.normal};
   }
 
   &:hover {
     &::before {
-      height: 30px;
+      height: 25px;
     }
   }
 `

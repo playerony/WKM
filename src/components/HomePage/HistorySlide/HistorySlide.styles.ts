@@ -11,7 +11,7 @@ export const StyledWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 25px);
 
   ${flexbox()}
 `
